@@ -512,7 +512,7 @@ class AkFund:
         
         Args:
             data: 数据
-            file_name: 文件名
+            file_name: 文件名，支持子目录（如 'stock_data/600519'）
             file_type: 文件类型，可选值：csv, excel
             
         Returns:
@@ -521,7 +521,16 @@ class AkFund:
         logger.info(f"保存数据到 {file_type} 文件: {file_name}")
         
         try:
-            file_path = os.path.join(self.storage_path, f"{file_name}.{file_type}")
+            # 处理file_name中的子目录路径
+            full_path = os.path.join(self.storage_path, file_name)
+            directory = os.path.dirname(full_path)
+            
+            # 创建子目录（如果不存在）
+            if directory and not os.path.exists(directory):
+                os.makedirs(directory, exist_ok=True)
+                logger.info(f"创建目录: {directory}")
+            
+            file_path = f"{full_path}.{file_type}"
             
             if file_type == 'csv':
                 data.to_csv(file_path, index=False, encoding='utf-8-sig')
