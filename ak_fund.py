@@ -357,13 +357,58 @@ class AkFund:
             logger.info(f"获取基金 {fund_code} 持仓")
             
             try:
-                data = ak.fund_portfolio_holdings_em(fund=fund_code, date=date)
+                data = ak.fund_portfolio_holdings_em(symbol=fund_code, date=date)
                 return data
             except Exception as e:
                 logger.error(f"获取基金持仓失败: {e}")
                 raise
         return inner()
-    
+
+    def get_fund_individual_detail_hold_xq(self, fund_code: str, date: str = None) -> pd.DataFrame:
+        """
+        获取基金 individual_detail_hold_xq
+
+        Args:
+            fund_code: 基金代码
+            date: 日期，格式：YYYY-MM-DD，默认最新
+
+        Returns:
+            基金 individual_detail_hold_xq 数据
+        """
+        @self._retry_decorator
+        def inner():
+            logger.info(f"获取基金 {fund_code} individual_detail_hold_xq")
+            try:
+                data = ak.fund_individual_detail_hold_xq(symbol=fund_code, date=date)
+                return data
+            except Exception as e:
+                logger.error(f"获取基金 individual_detail_hold_xq 失败: {e}")
+                raise
+        return inner()
+
+    def get_fund_portfolio_hold_em(self, fund_code: str, date: str = None) -> pd.DataFrame:
+        """
+        获取基金持仓
+
+        Args:
+            fund_code: 基金代码
+            date: 日期，格式：YYYY，默认最新
+
+        Returns:
+            基金持仓数据
+        """
+        @self._retry_decorator
+        def inner():
+            logger.info(f"获取基金 {fund_code} 持仓")
+
+            try:
+                data = ak.fund_portfolio_hold_em(symbol=fund_code, date=date)
+                return data
+            except Exception as e:
+                logger.error(f"获取基金持仓失败: {e}")
+                raise
+        return inner()
+
     def get_fund_ranking(self, date: str = None, rank_type: str = 'return_1y') -> pd.DataFrame:
         """
         获取基金业绩排名

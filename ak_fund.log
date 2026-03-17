@@ -194,3 +194,546 @@
 2026-03-15 09:34:41.479 | ERROR    | __main__:inner:340 - 获取基金历史净值失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 2026-03-15 09:34:41.479 | WARNING  | __main__:wrapper:86 - 尝试 3/3 失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 2026-03-15 09:34:41.479 | ERROR    | __main__:wrapper:90 - 所有尝试都失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 09:58:24.468 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 09:58:24.468 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 09:58:24.468 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 09:58:24.820 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 09:58:24.820 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 09:58:27.046 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 09:58:27.047 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 09:58:27.048 | INFO     | __main__:calculate_rsi:174 - 计算 14 日RSI完成
+2026-03-15 09:58:27.049 | INFO     | __main__:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 09:58:27.049 | INFO     | __main__:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 09:58:27.050 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 09:58:27.050 | INFO     | __main__:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 09:58:27.050 | INFO     | __main__:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 09:58:27.050 | INFO     | __main__:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 09:58:27.051 | INFO     | __main__:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 09:58:27.052 | INFO     | __main__:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 09:58:27.052 | INFO     | __main__:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 09:58:27.052 | INFO     | __main__:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 09:58:27.054 | INFO     | __main__:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 09:58:27.055 | INFO     | __main__:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 09:58:27.056 | INFO     | __main__:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 09:58:27.056 | INFO     | __main__:calculate_obv:351 - 计算OBV完成
+2026-03-15 09:58:27.069 | INFO     | __main__:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 09:58:27.071 | INFO     | __main__:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 09:58:27.071 | INFO     | __main__:calculate_all:480 - 完成计算 22 个技术指标
+2026-03-15 09:58:59.021 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 09:58:59.021 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 09:58:59.021 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 09:58:59.347 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 09:58:59.347 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 09:59:01.547 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 09:59:01.547 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 09:59:01.548 | INFO     | __main__:calculate_rsi:174 - 计算 14 日RSI完成
+2026-03-15 09:59:01.549 | INFO     | __main__:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 09:59:01.549 | INFO     | __main__:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 09:59:01.550 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 09:59:01.550 | INFO     | __main__:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 09:59:01.551 | INFO     | __main__:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 09:59:01.551 | INFO     | __main__:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 09:59:01.552 | INFO     | __main__:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 09:59:01.552 | INFO     | __main__:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 09:59:01.553 | INFO     | __main__:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 09:59:01.554 | INFO     | __main__:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 09:59:01.555 | INFO     | __main__:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 09:59:01.555 | INFO     | __main__:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 09:59:01.556 | INFO     | __main__:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 09:59:01.557 | INFO     | __main__:calculate_obv:351 - 计算OBV完成
+2026-03-15 09:59:01.571 | INFO     | __main__:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 09:59:01.571 | INFO     | __main__:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 09:59:01.572 | INFO     | __main__:calculate_all:480 - 完成计算 22 个技术指标
+2026-03-15 10:02:07.764 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:02:07.764 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:02:07.764 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:02:08.070 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:02:08.071 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:02:10.279 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 10:02:10.281 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:02:10.282 | INFO     | __main__:calculate_rsi:174 - 计算 14 日RSI完成
+2026-03-15 10:02:10.284 | INFO     | __main__:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:02:10.285 | INFO     | __main__:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:02:10.285 | INFO     | __main__:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:02:10.287 | INFO     | __main__:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:02:10.289 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:02:10.289 | INFO     | __main__:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:02:10.289 | INFO     | __main__:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:02:10.289 | INFO     | __main__:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:02:10.291 | INFO     | __main__:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:02:10.291 | INFO     | __main__:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:02:10.293 | INFO     | __main__:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:02:10.294 | INFO     | __main__:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:02:10.294 | INFO     | __main__:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:02:10.294 | INFO     | __main__:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:02:10.295 | INFO     | __main__:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:02:10.295 | INFO     | __main__:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:02:10.298 | INFO     | __main__:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:02:10.298 | INFO     | __main__:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:02:10.313 | INFO     | __main__:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:02:10.313 | INFO     | __main__:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:02:10.314 | INFO     | __main__:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:14:40.365 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:14:40.365 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:14:40.365 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:14:40.682 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:14:40.682 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:14:42.887 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 10:14:42.888 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:14:42.888 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:14:42.888 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:14:42.888 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:14:42.890 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:14:42.891 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:14:42.893 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:14:42.893 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:14:42.893 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:14:42.894 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:14:42.894 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:14:42.896 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:14:42.896 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:14:42.912 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:14:42.913 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:14:42.913 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:14:42.920 | INFO     | __main__:add_chart:689 - 添加图表: kline_1773540882913_2285250313968
+2026-03-15 10:14:42.920 | INFO     | __main__:add_chart:689 - 添加图表: volume_1773540882920_2285250313968
+2026-03-15 10:14:42.920 | INFO     | __main__:add_chart:689 - 添加图表: macd_1773540882920_2285266540768
+2026-03-15 10:14:42.920 | INFO     | __main__:add_chart:689 - 添加图表: rsi_1773540882920_2285270188480
+2026-03-15 10:14:42.920 | INFO     | __main__:add_chart:689 - 添加图表: kdj_1773540882920_2285266550416
+2026-03-15 10:20:25.740 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:20:25.741 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:20:25.741 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:20:26.038 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:20:26.038 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:20:28.211 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 10:20:28.211 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:20:28.212 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:20:28.212 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:20:28.213 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:20:28.215 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:20:28.215 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:20:28.217 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:20:28.217 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:20:28.218 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:20:28.219 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:20:28.220 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:20:28.220 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:20:28.221 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:20:28.236 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:20:28.237 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:20:28.237 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:20:28.243 | INFO     | __main__:add_chart:689 - 添加图表: kline_1773541228237_1968314132640
+2026-03-15 10:20:28.244 | INFO     | __main__:add_chart:689 - 添加图表: volume_1773541228243_1968314132640
+2026-03-15 10:20:28.244 | INFO     | __main__:add_chart:689 - 添加图表: macd_1773541228244_1968315133792
+2026-03-15 10:20:28.244 | INFO     | __main__:add_chart:689 - 添加图表: rsi_1773541228244_1968322511872
+2026-03-15 10:20:28.245 | INFO     | __main__:add_chart:689 - 添加图表: kdj_1773541228244_1968322938400
+2026-03-15 10:24:56.564 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:24:56.565 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:24:56.565 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:24:56.932 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:24:56.933 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:24:58.154 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 15 条数据
+2026-03-15 10:24:58.154 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:24:58.155 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:24:58.155 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:24:58.156 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:24:58.156 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:24:58.156 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:24:58.156 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:24:58.157 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:24:58.157 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:24:58.157 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:24:58.157 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:24:58.158 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:24:58.159 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:24:58.160 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:24:58.160 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:24:58.161 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:24:58.162 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:24:58.162 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:24:58.163 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:24:58.164 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:24:58.164 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:24:58.166 | INFO     | chart_module:add_chart:689 - 添加图表: kline_1773541498165_1402047673696
+2026-03-15 10:24:58.166 | INFO     | chart_module:add_chart:689 - 添加图表: volume_1773541498166_1402047673696
+2026-03-15 10:24:58.166 | INFO     | chart_module:add_chart:689 - 添加图表: macd_1773541498166_1402057774704
+2026-03-15 10:24:58.166 | INFO     | chart_module:add_chart:689 - 添加图表: rsi_1773541498166_1402061800320
+2026-03-15 10:24:58.166 | INFO     | chart_module:add_chart:689 - 添加图表: kdj_1773541498166_1402057775328
+2026-03-15 10:24:58.172 | INFO     | chart_module:set_theme:884 - 设置主题: dark
+2026-03-15 10:24:58.172 | INFO     | chart_module:set_theme:884 - 设置主题: light
+2026-03-15 10:24:58.173 | INFO     | chart_module:remove_chart:700 - 移除图表: volume_1773541498166_1402047673696
+2026-03-15 10:26:29.604 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:26:29.604 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:26:29.604 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:26:29.920 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:26:30.777 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 15 条数据
+2026-03-15 10:26:30.778 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:26:30.778 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:26:30.779 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:26:30.779 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:26:30.780 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:26:30.780 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:26:30.780 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:26:30.780 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:26:30.781 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:26:30.781 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:26:30.781 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:26:30.782 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:26:30.783 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:26:30.784 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:26:30.784 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:26:30.785 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:26:30.786 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:26:30.786 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:26:30.787 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:26:30.787 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:26:30.787 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:26:30.789 | INFO     | chart_module:add_chart:698 - 添加图表: kline_1773541590789_1488968000544
+2026-03-15 10:26:30.789 | INFO     | chart_module:add_chart:698 - 添加图表: volume_1773541590789_1488968000544
+2026-03-15 10:26:30.789 | INFO     | chart_module:add_chart:698 - 添加图表: macd_1773541590789_1488978208448
+2026-03-15 10:26:30.790 | INFO     | chart_module:add_chart:698 - 添加图表: rsi_1773541590790_1488977525632
+2026-03-15 10:26:30.790 | INFO     | chart_module:add_chart:698 - 添加图表: kdj_1773541590790_1488978214448
+2026-03-15 10:26:30.794 | INFO     | chart_module:set_theme:895 - 设置主题: dark
+2026-03-15 10:26:30.794 | INFO     | chart_module:set_theme:895 - 设置主题: light
+2026-03-15 10:26:30.794 | INFO     | chart_module:remove_chart:709 - 移除图表: volume_1773541590789_1488968000544
+2026-03-15 10:29:01.127 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:29:01.128 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:29:01.128 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:29:01.430 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:29:01.430 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:29:03.614 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 10:29:03.615 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:29:03.616 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:29:03.616 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:29:03.617 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:29:03.618 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:29:03.618 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:29:03.618 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:29:03.619 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:29:03.619 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:29:03.619 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:29:03.621 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:29:03.623 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:29:03.623 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:29:03.624 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:29:03.624 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:29:03.626 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:29:03.628 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:29:03.629 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:29:03.642 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:29:03.644 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:29:03.644 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:29:03.650 | INFO     | __main__:add_chart:698 - 添加图表: kline_1773541743644_1563004894624
+2026-03-15 10:29:03.651 | INFO     | __main__:add_chart:698 - 添加图表: volume_1773541743650_1563004894624
+2026-03-15 10:29:03.651 | INFO     | __main__:add_chart:698 - 添加图表: macd_1773541743651_1563012051120
+2026-03-15 10:29:03.651 | INFO     | __main__:add_chart:698 - 添加图表: rsi_1773541743651_1563007994176
+2026-03-15 10:29:03.651 | INFO     | __main__:add_chart:698 - 添加图表: kdj_1773541743651_1563012053712
+2026-03-15 10:30:18.430 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:30:27.284 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:30:27.284 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:30:27.284 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:30:27.588 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:30:27.589 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:30:28.465 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 15 条数据
+2026-03-15 10:30:28.466 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:30:28.466 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:30:28.466 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:30:28.467 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:30:28.468 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:30:28.468 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:30:28.468 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:30:28.468 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:30:28.469 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:30:28.469 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:30:28.470 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:30:28.470 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:30:28.471 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:30:28.472 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:30:28.472 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:30:28.473 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:30:28.474 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:30:28.474 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:30:28.475 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:30:28.475 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:30:28.476 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:30:28.478 | INFO     | chart_module:add_chart:698 - 添加图表: kline_1773541828476_2370051186928
+2026-03-15 10:30:28.478 | INFO     | chart_module:add_chart:698 - 添加图表: volume_1773541828478_2370051186928
+2026-03-15 10:30:28.478 | INFO     | chart_module:add_chart:698 - 添加图表: macd_1773541828478_2370115692992
+2026-03-15 10:30:28.478 | INFO     | chart_module:add_chart:698 - 添加图表: rsi_1773541828478_2370115542976
+2026-03-15 10:30:28.478 | INFO     | chart_module:add_chart:698 - 添加图表: kdj_1773541828478_2370115690256
+2026-03-15 10:30:28.484 | INFO     | chart_module:set_theme:895 - 设置主题: dark
+2026-03-15 10:30:28.484 | INFO     | chart_module:set_theme:895 - 设置主题: light
+2026-03-15 10:30:28.485 | INFO     | chart_module:remove_chart:709 - 移除图表: volume_1773541828478_2370051186928
+2026-03-15 10:34:09.251 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 10:34:09.252 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 10:34:09.252 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 10:34:09.576 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2026-03-15 10:34:09.576 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 10:34:11.740 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 10:34:11.742 | INFO     | technical_indicators:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 10:34:11.743 | INFO     | technical_indicators:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 10:34:11.743 | INFO     | technical_indicators:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 10:34:11.743 | INFO     | technical_indicators:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 10:34:11.744 | INFO     | technical_indicators:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 10:34:11.744 | INFO     | technical_indicators:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 10:34:11.744 | INFO     | technical_indicators:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 10:34:11.744 | INFO     | technical_indicators:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 10:34:11.745 | INFO     | technical_indicators:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 10:34:11.745 | INFO     | technical_indicators:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 10:34:11.746 | INFO     | technical_indicators:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 10:34:11.746 | INFO     | technical_indicators:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 10:34:11.747 | INFO     | technical_indicators:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 10:34:11.748 | INFO     | technical_indicators:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 10:34:11.748 | INFO     | technical_indicators:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 10:34:11.749 | INFO     | technical_indicators:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 10:34:11.750 | INFO     | technical_indicators:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 10:34:11.750 | INFO     | technical_indicators:calculate_obv:351 - 计算OBV完成
+2026-03-15 10:34:11.765 | INFO     | technical_indicators:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 10:34:11.766 | INFO     | technical_indicators:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 10:34:11.766 | INFO     | technical_indicators:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 10:34:11.773 | INFO     | __main__:add_chart:698 - 添加图表: kline_1773542051767_2453545429728
+2026-03-15 10:34:11.773 | INFO     | __main__:add_chart:698 - 添加图表: volume_1773542051773_2453545429728
+2026-03-15 10:34:11.773 | INFO     | __main__:add_chart:698 - 添加图表: macd_1773542051773_2453540674144
+2026-03-15 10:34:11.774 | INFO     | __main__:add_chart:698 - 添加图表: rsi_1773542051774_2453554990144
+2026-03-15 10:34:11.774 | INFO     | __main__:add_chart:698 - 添加图表: kdj_1773542051774_2453554974880
+2026-03-15 22:05:05.287 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:05:05.288 | INFO     | ak_fund:inner:174 - 获取股票 600519 daily K线数据
+2026-03-15 22:05:05.288 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 600519 K线数据
+2026-03-15 22:05:05.612 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 600519 K线数据
+2026-03-15 22:05:07.807 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 242 条数据
+2026-03-15 22:05:07.808 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 22:05:07.809 | INFO     | __main__:calculate_rsi:174 - 计算 14 日RSI完成
+2026-03-15 22:05:07.809 | INFO     | __main__:calculate_ma:112 - 计算 5 日移动平均线完成
+2026-03-15 22:05:07.810 | INFO     | __main__:calculate_ma:112 - 计算 7 日移动平均线完成
+2026-03-15 22:05:07.811 | INFO     | __main__:calculate_ma:112 - 计算 10 日移动平均线完成
+2026-03-15 22:05:07.811 | INFO     | __main__:calculate_ma:112 - 计算 15 日移动平均线完成
+2026-03-15 22:05:07.811 | INFO     | __main__:calculate_ma:112 - 计算 20 日移动平均线完成
+2026-03-15 22:05:07.811 | INFO     | __main__:calculate_ma:112 - 计算 30 日移动平均线完成
+2026-03-15 22:05:07.812 | INFO     | __main__:calculate_ma:112 - 计算 60 日移动平均线完成
+2026-03-15 22:05:07.812 | INFO     | __main__:calculate_ma:112 - 计算 80 日移动平均线完成
+2026-03-15 22:05:07.812 | INFO     | __main__:calculate_ema:136 - 计算 12 日指数移动平均线完成
+2026-03-15 22:05:07.812 | INFO     | __main__:calculate_ema:136 - 计算 26 日指数移动平均线完成
+2026-03-15 22:05:07.814 | INFO     | __main__:calculate_rsi:174 - 计算 6 日RSI完成
+2026-03-15 22:05:07.815 | INFO     | __main__:calculate_rsi:174 - 计算 12 日RSI完成
+2026-03-15 22:05:07.815 | INFO     | __main__:calculate_rsi:174 - 计算 24 日RSI完成
+2026-03-15 22:05:07.815 | INFO     | __main__:calculate_macd:214 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-15 22:05:07.817 | INFO     | __main__:calculate_boll:251 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-15 22:05:07.817 | INFO     | __main__:calculate_kdj:295 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-15 22:05:07.818 | INFO     | __main__:calculate_atr:329 - 计算 14 日ATR完成
+2026-03-15 22:05:07.818 | INFO     | __main__:calculate_obv:351 - 计算OBV完成
+2026-03-15 22:05:07.843 | INFO     | __main__:calculate_cci:389 - 计算 20 日CCI完成
+2026-03-15 22:05:07.843 | INFO     | __main__:calculate_williams_r:419 - 计算 14 日威廉指标完成
+2026-03-15 22:05:07.845 | INFO     | __main__:calculate_all:484 - 完成计算 26 个技术指标
+2026-03-15 22:51:42.857 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:51:42.857 | INFO     | ak_fund:inner:300 - 获取基金 005538 基本信息
+2026-03-15 22:52:22.673 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:52:22.673 | INFO     | ak_fund:inner:300 - 获取基金 005538 基本信息
+2026-03-15 22:53:04.310 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:53:04.310 | INFO     | ak_fund:inner:300 - 获取基金 005538 基本信息
+2026-03-15 22:53:26.797 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:53:26.798 | INFO     | ak_fund:inner:357 - 获取基金 005538 持仓
+2026-03-15 22:53:26.798 | ERROR    | ak_fund:inner:363 - 获取基金持仓失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:26.798 | WARNING  | ak_fund:wrapper:86 - 尝试 1/3 失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:28.798 | INFO     | ak_fund:inner:357 - 获取基金 005538 持仓
+2026-03-15 22:53:28.798 | ERROR    | ak_fund:inner:363 - 获取基金持仓失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:28.798 | WARNING  | ak_fund:wrapper:86 - 尝试 2/3 失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:30.799 | INFO     | ak_fund:inner:357 - 获取基金 005538 持仓
+2026-03-15 22:53:30.799 | ERROR    | ak_fund:inner:363 - 获取基金持仓失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:30.799 | WARNING  | ak_fund:wrapper:86 - 尝试 3/3 失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:53:30.799 | ERROR    | ak_fund:wrapper:90 - 所有尝试都失败: module 'akshare' has no attribute 'fund_portfolio_holdings_em'
+2026-03-15 22:57:36.322 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:57:36.322 | INFO     | ak_fund:inner:380 - 获取基金 005538 individual_detail_hold_xq
+2026-03-15 22:57:36.322 | ERROR    | ak_fund:inner:385 - 获取基金 individual_detail_hold_xq 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:36.322 | WARNING  | ak_fund:wrapper:86 - 尝试 1/3 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:38.323 | INFO     | ak_fund:inner:380 - 获取基金 005538 individual_detail_hold_xq
+2026-03-15 22:57:38.323 | ERROR    | ak_fund:inner:385 - 获取基金 individual_detail_hold_xq 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:38.323 | WARNING  | ak_fund:wrapper:86 - 尝试 2/3 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:40.324 | INFO     | ak_fund:inner:380 - 获取基金 005538 individual_detail_hold_xq
+2026-03-15 22:57:40.324 | ERROR    | ak_fund:inner:385 - 获取基金 individual_detail_hold_xq 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:40.324 | WARNING  | ak_fund:wrapper:86 - 尝试 3/3 失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:57:40.324 | ERROR    | ak_fund:wrapper:90 - 所有尝试都失败: fund_individual_detail_hold_xq() got an unexpected keyword argument 'fund'
+2026-03-15 22:59:41.929 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:59:57.966 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 22:59:57.967 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 22:59:57.967 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 22:59:57.967 | WARNING  | ak_fund:wrapper:86 - 尝试 1/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 22:59:59.967 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 22:59:59.967 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 22:59:59.967 | WARNING  | ak_fund:wrapper:86 - 尝试 2/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:01.967 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:00:01.967 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:01.967 | WARNING  | ak_fund:wrapper:86 - 尝试 3/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:01.967 | ERROR    | ak_fund:wrapper:90 - 所有尝试都失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:12.105 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 23:00:12.105 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:00:12.106 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:12.106 | WARNING  | ak_fund:wrapper:86 - 尝试 1/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:14.106 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:00:14.106 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:14.106 | WARNING  | ak_fund:wrapper:86 - 尝试 2/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:16.107 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:00:16.107 | ERROR    | ak_fund:inner:408 - 获取基金持仓失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:16.107 | WARNING  | ak_fund:wrapper:86 - 尝试 3/3 失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:00:16.107 | ERROR    | ak_fund:wrapper:90 - 所有尝试都失败: fund_portfolio_hold_em() got an unexpected keyword argument 'fund'
+2026-03-15 23:01:00.527 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 23:01:00.527 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:33:19.952 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 23:33:19.952 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:34:38.302 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-15 23:34:38.302 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-15 23:34:38.736 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-15 23:34:38.737 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:01:57.793 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:01:57.793 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:01:58.520 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:01:58.521 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:02:45.954 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:02:45.954 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:02:46.402 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:02:46.404 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:04:27.880 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:04:27.880 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:04:28.337 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:04:28.337 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:04:39.131 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:04:39.131 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:04:39.665 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:04:39.666 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:04:58.965 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:04:58.965 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:04:59.387 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:04:59.387 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:04:59.387 | INFO     | ak_fund:inner:174 - 获取股票 301662 d K线数据
+2026-03-16 22:04:59.387 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301662 K线数据
+2026-03-16 22:04:59.387 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:04:59.387 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301662 K线数据
+2026-03-16 22:05:00.438 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 220 条数据
+2026-03-16 22:05:00.443 | INFO     | ak_fund:inner:174 - 获取股票 688778 d K线数据
+2026-03-16 22:05:00.443 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688778 K线数据
+2026-03-16 22:05:00.443 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:00.443 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688778 K线数据
+2026-03-16 22:05:03.127 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:03.131 | INFO     | ak_fund:inner:174 - 获取股票 688155 d K线数据
+2026-03-16 22:05:03.131 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688155 K线数据
+2026-03-16 22:05:03.131 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:03.131 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688155 K线数据
+2026-03-16 22:05:05.705 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:05.708 | INFO     | ak_fund:inner:174 - 获取股票 300450 d K线数据
+2026-03-16 22:05:05.708 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 300450 K线数据
+2026-03-16 22:05:05.708 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:05.708 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 300450 K线数据
+2026-03-16 22:05:08.301 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:08.304 | INFO     | ak_fund:inner:174 - 获取股票 301617 d K线数据
+2026-03-16 22:05:08.304 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301617 K线数据
+2026-03-16 22:05:08.304 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:08.305 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301617 K线数据
+2026-03-16 22:05:09.759 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 303 条数据
+2026-03-16 22:05:09.763 | INFO     | ak_fund:inner:174 - 获取股票 688147 d K线数据
+2026-03-16 22:05:09.763 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688147 K线数据
+2026-03-16 22:05:09.764 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:09.764 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688147 K线数据
+2026-03-16 22:05:12.234 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 778 条数据
+2026-03-16 22:05:12.238 | INFO     | ak_fund:inner:174 - 获取股票 688499 d K线数据
+2026-03-16 22:05:12.238 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688499 K线数据
+2026-03-16 22:05:12.238 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:12.238 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688499 K线数据
+2026-03-16 22:05:14.823 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:14.826 | INFO     | ak_fund:inner:174 - 获取股票 301150 d K线数据
+2026-03-16 22:05:14.826 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301150 K线数据
+2026-03-16 22:05:14.826 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:14.826 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301150 K线数据
+2026-03-16 22:05:17.388 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 944 条数据
+2026-03-16 22:05:17.394 | INFO     | ak_fund:inner:174 - 获取股票 002846 d K线数据
+2026-03-16 22:05:17.394 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 002846 K线数据
+2026-03-16 22:05:17.394 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:17.394 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 002846 K线数据
+2026-03-16 22:05:19.956 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:19.958 | INFO     | ak_fund:inner:174 - 获取股票 300092 d K线数据
+2026-03-16 22:05:19.959 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 300092 K线数据
+2026-03-16 22:05:19.959 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:19.959 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 300092 K线数据
+2026-03-16 22:05:22.598 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:54.101 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-16 22:05:54.101 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-16 22:05:54.533 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-16 22:05:54.534 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-16 22:05:54.534 | INFO     | ak_fund:inner:174 - 获取股票 301662 d K线数据
+2026-03-16 22:05:54.534 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301662 K线数据
+2026-03-16 22:05:54.534 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:54.534 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301662 K线数据
+2026-03-16 22:05:55.588 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 220 条数据
+2026-03-16 22:05:55.588 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 301662_kline.csv
+2026-03-16 22:05:55.590 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\301662_kline.csv.csv
+2026-03-16 22:05:55.591 | INFO     | ak_fund:inner:174 - 获取股票 688778 d K线数据
+2026-03-16 22:05:55.591 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688778 K线数据
+2026-03-16 22:05:55.591 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:55.591 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688778 K线数据
+2026-03-16 22:05:58.148 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:05:58.148 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 688778_kline.csv
+2026-03-16 22:05:58.151 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\688778_kline.csv.csv
+2026-03-16 22:05:58.151 | INFO     | ak_fund:inner:174 - 获取股票 688155 d K线数据
+2026-03-16 22:05:58.152 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688155 K线数据
+2026-03-16 22:05:58.152 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:05:58.152 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688155 K线数据
+2026-03-16 22:06:00.668 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:06:00.669 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 688155_kline.csv
+2026-03-16 22:06:00.672 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\688155_kline.csv.csv
+2026-03-16 22:06:00.672 | INFO     | ak_fund:inner:174 - 获取股票 300450 d K线数据
+2026-03-16 22:06:00.672 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 300450 K线数据
+2026-03-16 22:06:00.672 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:00.672 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 300450 K线数据
+2026-03-16 22:06:03.230 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:06:03.230 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 300450_kline.csv
+2026-03-16 22:06:03.233 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\300450_kline.csv.csv
+2026-03-16 22:06:03.233 | INFO     | ak_fund:inner:174 - 获取股票 301617 d K线数据
+2026-03-16 22:06:03.233 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301617 K线数据
+2026-03-16 22:06:03.233 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:03.233 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301617 K线数据
+2026-03-16 22:06:04.679 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 303 条数据
+2026-03-16 22:06:04.680 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 301617_kline.csv
+2026-03-16 22:06:04.682 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\301617_kline.csv.csv
+2026-03-16 22:06:04.682 | INFO     | ak_fund:inner:174 - 获取股票 688147 d K线数据
+2026-03-16 22:06:04.682 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688147 K线数据
+2026-03-16 22:06:04.682 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:04.682 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688147 K线数据
+2026-03-16 22:06:07.116 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 778 条数据
+2026-03-16 22:06:07.116 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 688147_kline.csv
+2026-03-16 22:06:07.118 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\688147_kline.csv.csv
+2026-03-16 22:06:07.118 | INFO     | ak_fund:inner:174 - 获取股票 688499 d K线数据
+2026-03-16 22:06:07.118 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 688499 K线数据
+2026-03-16 22:06:07.119 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:07.119 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 688499 K线数据
+2026-03-16 22:06:09.708 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:06:09.708 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 688499_kline.csv
+2026-03-16 22:06:09.719 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\688499_kline.csv.csv
+2026-03-16 22:06:09.719 | INFO     | ak_fund:inner:174 - 获取股票 301150 d K线数据
+2026-03-16 22:06:09.719 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 301150 K线数据
+2026-03-16 22:06:09.719 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:09.719 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 301150 K线数据
+2026-03-16 22:06:12.254 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 944 条数据
+2026-03-16 22:06:12.254 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 301150_kline.csv
+2026-03-16 22:06:12.257 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\301150_kline.csv.csv
+2026-03-16 22:06:12.257 | INFO     | ak_fund:inner:174 - 获取股票 002846 d K线数据
+2026-03-16 22:06:12.257 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 002846 K线数据
+2026-03-16 22:06:12.257 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:12.257 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 002846 K线数据
+2026-03-16 22:06:14.891 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:06:14.891 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 002846_kline.csv
+2026-03-16 22:06:14.894 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\002846_kline.csv.csv
+2026-03-16 22:06:14.894 | INFO     | ak_fund:inner:174 - 获取股票 300092 d K线数据
+2026-03-16 22:06:14.894 | INFO     | ak_fund:inner:181 - 尝试使用东方财富数据源获取 300092 K线数据
+2026-03-16 22:06:14.894 | WARNING  | ak_fund:inner:196 - 东方财富数据源失败: 不支持的周期: d
+2026-03-16 22:06:14.894 | INFO     | ak_fund:inner:200 - 尝试使用腾讯数据源获取 300092 K线数据
+2026-03-16 22:06:17.499 | INFO     | ak_fund:inner:214 - 腾讯数据源成功获取 1014 条数据
+2026-03-16 22:06:17.500 | INFO     | ak_fund:save_data:521 - 保存数据到 csv 文件: 300092_kline.csv
+2026-03-16 22:06:17.513 | INFO     | ak_fund:save_data:533 - 数据保存成功: ./data\300092_kline.csv.csv

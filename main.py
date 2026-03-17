@@ -1,16 +1,12 @@
-# 这是一个示例 Python 脚本。
+from ak_fund import AkFund
+from technical_indicators import TechnicalIndicators
+import quarter_filter
 
-# 按 Ctrl+F5 执行或将其替换为您的代码。
-# 按 双击 Shift 在所有地方搜索类、文件、工具窗口、操作和设置。
-
-
-def print_hi(name):
-    # 在下面的代码行中使用断点来调试脚本。
-    print(f'Hi, {name}')  # 按 F9 切换断点。
-
-
-# 按装订区域中的绿色按钮以运行脚本。
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# 访问 https://www.jetbrains.com/help/pycharm/ 获取 PyCharm 帮助
+    ak_fund = AkFund()
+    fund_info = ak_fund.get_fund_portfolio_hold_em(fund_code='005538')
+    quarter_summary = quarter_filter.filter_latest_quarter_data(fund_info)
+    stock_code_series = quarter_summary['股票代码']
+    for stock in stock_code_series:
+        stock_kline = ak_fund.get_stock_kline(symbol=stock, period='d', start_date='2022-01-01')
+        ak_fund.save_data(stock_kline, f'{stock}_kline')
