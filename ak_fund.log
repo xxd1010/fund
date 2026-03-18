@@ -1865,3 +1865,1068 @@
 2026-03-17 23:23:09.840 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
 2026-03-17 23:23:09.840 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
 2026-03-17 23:23:09.842 | INFO     | technical_indicators:calculate_all:503 - 完成计算 19 个技术指标
+2026-03-17 23:26:37.423 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-17 23:26:37.423 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-17 23:26:37.423 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-17 23:26:37.859 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-17 23:26:37.860 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-17 23:26:37.860 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-17 23:26:37.861 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-17 23:26:37.861 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-17 23:26:37.862 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-17 23:26:37.863 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:37.863 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:37.863 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:37.863 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:37.864 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:37.864 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:37.864 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:37.865 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:37.866 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:37.867 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:37.867 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:37.868 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:37.869 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:37.886 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:37.886 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:37.899 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-17 23:26:37.901 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-17 23:26:37.901 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:37.902 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:37.902 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:37.902 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:37.903 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:37.904 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:37.904 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:37.906 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:37.907 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:37.908 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:37.908 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:37.909 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:37.910 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:37.972 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:37.972 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:37.979 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-17 23:26:37.981 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-17 23:26:37.982 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:37.983 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:37.984 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:37.984 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:37.984 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:37.985 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:37.985 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:37.986 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:37.986 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:37.987 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:37.988 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:37.988 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:37.989 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.056 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.058 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.066 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-17 23:26:38.068 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-17 23:26:38.068 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.069 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.069 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.069 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.069 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.069 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.070 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.071 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.072 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.072 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.072 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.074 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.074 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.144 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.144 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.152 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-17 23:26:38.153 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.154 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.156 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.156 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.157 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.159 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.159 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.159 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.177 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.177 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.185 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-17 23:26:38.186 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-17 23:26:38.187 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.187 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.187 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.188 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.188 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.188 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.188 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.189 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.190 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.190 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.191 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.192 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.192 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.236 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.236 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.244 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-17 23:26:38.245 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-17 23:26:38.246 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.247 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.247 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.247 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.248 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.248 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.248 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.249 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.250 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.250 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.251 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.252 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.252 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.317 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.317 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.326 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-17 23:26:38.327 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-17 23:26:38.327 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.328 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.328 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.329 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.329 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.329 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.330 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.332 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.332 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.333 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.334 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.335 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.335 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.389 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.389 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.397 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-17 23:26:38.398 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-17 23:26:38.400 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.400 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.400 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.400 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.400 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.401 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.401 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.401 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.403 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.403 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.405 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.405 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.405 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.476 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.476 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-17 23:26:38.485 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-17 23:26:38.487 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-17 23:26:38.487 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-17 23:26:38.487 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-17 23:26:38.487 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-17 23:26:38.489 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-17 23:26:38.489 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-17 23:26:38.489 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-17 23:26:38.489 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-17 23:26:38.491 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-17 23:26:38.492 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-17 23:26:38.493 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-17 23:26:38.494 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-17 23:26:38.494 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-17 23:26:38.495 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-17 23:26:38.578 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-17 23:26:38.578 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:02.812 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 14:20:02.813 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-18 14:20:02.813 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-18 14:20:03.458 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-18 14:20:03.458 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-18 14:20:03.459 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-18 14:20:03.459 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-18 14:20:03.459 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-18 14:20:03.460 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-18 14:20:03.461 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.461 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.461 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.461 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.461 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.462 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.462 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.463 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.463 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.464 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.464 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.465 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.465 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.478 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.478 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.487 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-18 14:20:03.489 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-18 14:20:03.490 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.490 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.490 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.491 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.491 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.491 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.491 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.492 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.493 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.494 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.495 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.495 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.495 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.554 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.554 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.561 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-18 14:20:03.562 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 14:20:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.564 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.566 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.566 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.567 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.567 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.567 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.642 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.642 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.648 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-18 14:20:03.650 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 14:20:03.650 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.651 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.651 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.651 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.651 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.652 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.652 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.652 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.653 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.654 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.654 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.655 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.655 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.726 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.728 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.736 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-18 14:20:03.737 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.740 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.740 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.742 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.742 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.743 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.743 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.761 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.761 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.768 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-18 14:20:03.770 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.772 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.773 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.773 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.775 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.775 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.776 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.776 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.820 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.821 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.829 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-18 14:20:03.830 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-18 14:20:03.830 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.831 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.831 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.831 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.833 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.834 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.834 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.835 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.836 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.837 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.904 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.905 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.914 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-18 14:20:03.916 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-18 14:20:03.916 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.917 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.917 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.917 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.917 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.918 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.918 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.918 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.919 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.920 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.920 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.921 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.922 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:03.982 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:03.982 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:03.988 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-18 14:20:03.990 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 14:20:03.990 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:03.991 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:03.991 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:03.992 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:03.992 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:03.992 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:03.992 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:03.993 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:03.994 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:03.994 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:03.994 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:03.995 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:03.996 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:04.065 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:04.065 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 14:20:04.072 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-18 14:20:04.073 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 14:20:04.074 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 14:20:04.074 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 14:20:04.075 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 14:20:04.075 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 14:20:04.075 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 14:20:04.075 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 14:20:04.075 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 14:20:04.076 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 14:20:04.077 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 14:20:04.077 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 14:20:04.078 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 14:20:04.078 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 14:20:04.078 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 14:20:04.146 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 14:20:04.146 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:29.001 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 16:16:29.003 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-18 16:16:29.003 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-18 16:16:29.329 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-18 16:16:29.331 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-18 16:16:29.336 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-18 16:16:29.337 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-18 16:16:29.337 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-18 16:16:29.345 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-18 16:16:29.347 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:29.349 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:29.349 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:29.349 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:29.350 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:29.352 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:29.352 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:29.355 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:29.358 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:29.361 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:29.363 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:29.365 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:29.366 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:29.413 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:29.413 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:29.444 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-18 16:16:29.449 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-18 16:16:29.450 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:29.451 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:29.452 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:29.453 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:29.453 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:29.454 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:29.455 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:29.457 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:29.459 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:29.461 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:29.463 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:29.466 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:29.469 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:29.707 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:29.708 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:29.728 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-18 16:16:29.733 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 16:16:29.734 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:29.735 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:29.736 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:29.737 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:29.738 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:29.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:29.739 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:29.742 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:29.745 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:29.748 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:29.749 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:29.751 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:29.752 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:29.964 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:29.964 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:29.983 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-18 16:16:29.988 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 16:16:29.989 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:29.990 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:29.991 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:29.991 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:29.991 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:29.992 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:29.993 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:29.994 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:29.996 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:29.998 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:29.999 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:30.001 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:30.004 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:30.225 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:30.226 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:30.244 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-18 16:16:30.246 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-18 16:16:30.247 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:30.248 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:30.249 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:30.249 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:30.250 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:30.250 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:30.251 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:30.253 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:30.254 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:30.256 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:30.257 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:30.258 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:30.261 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:30.325 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:30.326 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:30.350 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-18 16:16:30.353 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-18 16:16:30.354 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:30.355 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:30.356 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:30.357 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:30.358 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:30.359 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:30.359 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:30.361 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:30.363 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:30.365 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:30.367 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:30.369 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:30.372 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:30.609 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:30.610 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:30.638 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-18 16:16:30.643 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-18 16:16:30.645 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:30.646 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:30.648 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:30.649 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:30.650 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:30.651 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:30.652 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:30.654 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:30.657 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:30.660 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:30.663 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:30.666 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:30.670 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:30.975 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:30.975 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:31.001 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-18 16:16:31.006 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-18 16:16:31.008 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:31.010 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:31.011 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:31.012 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:31.012 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:31.013 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:31.014 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:31.015 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:31.018 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:31.020 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:31.023 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:31.024 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:31.026 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:31.248 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:31.248 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:31.273 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-18 16:16:31.278 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 16:16:31.280 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:31.281 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:31.281 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:31.283 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:31.284 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:31.284 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:31.285 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:31.287 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:31.289 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:31.291 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:31.293 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:31.295 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:31.297 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:31.642 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:31.642 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 16:16:31.665 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-18 16:16:31.670 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 16:16:31.672 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 16:16:31.673 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 16:16:31.673 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 16:16:31.674 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 16:16:31.675 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 16:16:31.676 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 16:16:31.676 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 16:16:31.679 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 16:16:31.681 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 16:16:31.683 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 16:16:31.686 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 16:16:31.687 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 16:16:31.691 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 16:16:32.005 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 16:16:32.007 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:44.675 | WARNING  | ak_fund:_load_config:68 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 20:46:44.675 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-18 20:46:44.676 | INFO     | ak_fund:inner:402 - 获取基金 005538 持仓
+2026-03-18 20:46:45.175 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-18 20:46:45.175 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-18 20:46:45.177 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-18 20:46:45.177 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-18 20:46:45.177 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-18 20:46:45.178 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-18 20:46:45.180 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.180 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.180 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.180 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.181 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.181 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.181 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.183 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.185 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.185 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.186 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.186 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.188 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.199 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.199 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.210 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-18 20:46:45.211 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-18 20:46:45.213 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.213 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.213 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.214 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.214 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.214 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.214 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.216 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.216 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.217 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.217 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.219 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.219 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.284 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.284 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.291 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-18 20:46:45.293 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:46:45.293 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.295 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.296 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.298 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.298 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.299 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.299 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.299 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.372 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.372 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.381 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-18 20:46:45.383 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:46:45.384 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.385 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.385 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.385 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.386 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.387 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.387 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.387 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.389 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.390 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.391 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.392 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.392 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.469 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.469 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.476 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-18 20:46:45.478 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-18 20:46:45.478 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.479 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.479 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.479 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.479 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.481 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.481 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.481 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.483 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.483 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.484 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.484 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.484 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.504 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.506 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.515 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-18 20:46:45.515 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-18 20:46:45.517 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.517 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.519 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.519 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.519 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.519 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.520 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.520 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.522 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.523 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.523 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.525 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.525 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.570 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.570 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.579 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-18 20:46:45.581 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-18 20:46:45.582 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.582 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.584 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.584 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.585 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.585 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.585 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.587 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.588 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.590 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.592 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.592 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.593 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.658 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.658 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.666 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-18 20:46:45.667 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-18 20:46:45.669 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.669 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.669 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.670 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.670 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.670 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.670 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.672 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.672 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.673 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.673 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.675 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.677 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.732 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.732 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.740 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-18 20:46:45.742 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:46:45.743 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.743 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.743 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.745 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.746 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.746 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.746 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.747 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.747 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.748 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.748 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.750 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.750 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.819 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.819 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:46:45.827 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-18 20:46:45.829 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:46:45.830 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:46:45.830 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:46:45.830 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:46:45.830 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:46:45.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:46:45.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:46:45.832 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:46:45.833 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:46:45.833 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:46:45.833 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:46:45.835 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:46:45.835 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:46:45.836 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:46:45.905 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:46:45.905 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:51:17.128 | WARNING  | ak_fund:_load_config:70 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 20:52:03.087 | WARNING  | ak_fund:_load_config:70 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 20:52:03.087 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-18 20:52:03.087 | INFO     | ak_fund:inner:431 - 获取基金 005538 持仓
+2026-03-18 20:52:03.529 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-18 20:52:03.530 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-18 20:52:03.530 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-18 20:52:03.530 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-18 20:52:03.530 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-18 20:52:03.532 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-18 20:52:03.532 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.533 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.533 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.534 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.534 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.534 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.534 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.534 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.536 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.536 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.536 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.538 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.538 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.550 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.550 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.560 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-18 20:52:03.561 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-18 20:52:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.563 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.565 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.565 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.565 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.566 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.566 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.568 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.568 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.568 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.569 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.631 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.631 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.638 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-18 20:52:03.640 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:52:03.642 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.642 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.642 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.642 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.643 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.643 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.643 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.643 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.645 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.646 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.647 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.647 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.648 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.719 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.719 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.729 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-18 20:52:03.730 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:52:03.731 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.732 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.732 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.732 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.732 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.732 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.734 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.734 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.735 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.735 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.737 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.737 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.738 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.810 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.810 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.819 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-18 20:52:03.819 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-18 20:52:03.821 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.821 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.821 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.822 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.822 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.822 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.822 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.824 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.825 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.826 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.827 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.827 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.827 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.846 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.847 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.854 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-18 20:52:03.856 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-18 20:52:03.856 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.856 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.858 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.858 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.858 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.858 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.858 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.859 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.859 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.861 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.861 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.862 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.862 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.905 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.905 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.913 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-18 20:52:03.915 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-18 20:52:03.915 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.916 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.916 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.916 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.916 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.918 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.918 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.919 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.919 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:03.921 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:03.921 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:03.921 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:03.923 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:03.986 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:03.986 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:03.993 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-18 20:52:03.995 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-18 20:52:03.996 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:03.996 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:03.997 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:03.997 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:03.997 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:03.997 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:03.997 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:03.998 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:03.998 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:04.000 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:04.000 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:04.000 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:04.001 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:04.053 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:04.053 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:04.061 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-18 20:52:04.062 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:52:04.063 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:04.063 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:04.065 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:04.065 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:04.065 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:04.065 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:04.067 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:04.067 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:04.068 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:04.068 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:04.068 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:04.070 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:04.070 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:04.138 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:04.138 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 20:52:04.145 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-18 20:52:04.148 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 20:52:04.148 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 20:52:04.148 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 20:52:04.148 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 20:52:04.150 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 20:52:04.150 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 20:52:04.151 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 20:52:04.151 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 20:52:04.152 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 20:52:04.152 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 20:52:04.153 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 20:52:04.153 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 20:52:04.153 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 20:52:04.155 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 20:52:04.225 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 20:52:04.225 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:06:45.154 | WARNING  | ak_fund:_load_config:71 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 21:06:45.154 | INFO     | ak_fund:process_data:522 - 处理 stock_kline 数据
+2026-03-18 21:21:08.870 | WARNING  | ak_fund:_load_config:72 - 配置文件 config.json 不存在，使用默认配置
+2026-03-18 21:21:08.870 | INFO     | data_reader:__init__:29 - 数据读取器初始化完成，基础路径: data
+2026-03-18 21:21:08.870 | INFO     | ak_fund:inner:463 - 获取基金 005538 持仓
+2026-03-18 21:21:09.297 | INFO     | quarter_filter:filter_latest_quarter_data:62 - 识别到最新季度: 2025年Q4
+2026-03-18 21:21:09.299 | INFO     | quarter_filter:filter_latest_quarter_data:76 - 过滤结果: 从 81 条记录中筛选出 10 条最新季度数据
+2026-03-18 21:21:09.299 | INFO     | data_reader:list_files:221 - 在 data\stock_data 中找到 10 个文件
+2026-03-18 21:21:09.299 | INFO     | data_reader:list_stock_files:241 - 找到 10 个股票数据文件
+2026-03-18 21:21:09.299 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301662_kline.csv
+2026-03-18 21:21:09.301 | INFO     | data_reader:read_csv:57 - 成功读取 221 行数据
+2026-03-18 21:21:09.302 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.302 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.302 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.303 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.303 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.303 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.303 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.304 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.305 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.306 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.306 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.307 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.308 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.319 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.319 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.329 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688778_kline.csv
+2026-03-18 21:21:09.330 | INFO     | data_reader:read_csv:57 - 成功读取 1115 行数据
+2026-03-18 21:21:09.332 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.332 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.332 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.333 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.333 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.333 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.334 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.334 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.335 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.335 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.337 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.337 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.338 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.399 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.399 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.407 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688155_kline.csv
+2026-03-18 21:21:09.408 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 21:21:09.408 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.410 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.410 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.410 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.410 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.412 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.412 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.412 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.413 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.413 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.415 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.415 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.416 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.490 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.491 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.499 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300450_kline.csv
+2026-03-18 21:21:09.501 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 21:21:09.501 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.502 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.504 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.504 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.505 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.505 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.507 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.507 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.575 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.575 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.583 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301617_kline.csv
+2026-03-18 21:21:09.584 | INFO     | data_reader:read_csv:57 - 成功读取 304 行数据
+2026-03-18 21:21:09.584 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.586 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.586 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.586 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.587 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.587 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.587 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.587 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.589 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.589 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.590 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.590 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.592 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.608 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.608 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.617 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688147_kline.csv
+2026-03-18 21:21:09.617 | INFO     | data_reader:read_csv:57 - 成功读取 779 行数据
+2026-03-18 21:21:09.619 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.619 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.619 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.619 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.620 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.620 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.620 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.622 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.622 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.622 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.623 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.623 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.625 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.669 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.669 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.677 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\688499_kline.csv
+2026-03-18 21:21:09.679 | INFO     | data_reader:read_csv:57 - 成功读取 1140 行数据
+2026-03-18 21:21:09.679 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.679 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.680 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.680 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.680 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.680 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.682 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.682 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.684 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.684 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.685 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.685 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.687 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.753 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.753 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.760 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\301150_kline.csv
+2026-03-18 21:21:09.762 | INFO     | data_reader:read_csv:57 - 成功读取 945 行数据
+2026-03-18 21:21:09.763 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.763 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.764 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.765 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.765 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.765 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.766 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.766 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.767 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.768 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.768 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.769 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.770 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.824 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.824 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.832 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\002846_kline.csv
+2026-03-18 21:21:09.833 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 21:21:09.834 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.835 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.836 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.836 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.836 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.837 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.837 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.838 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.838 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.840 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.840 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.841 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.841 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.909 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.909 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标
+2026-03-18 21:21:09.916 | INFO     | data_reader:read_csv:53 - 读取CSV文件: data\stock_data\300092_kline.csv
+2026-03-18 21:21:09.918 | INFO     | data_reader:read_csv:57 - 成功读取 1258 行数据
+2026-03-18 21:21:09.919 | INFO     | technical_indicators:calculate_ma:122 - 计算 3 日移动平均线完成
+2026-03-18 21:21:09.919 | INFO     | technical_indicators:calculate_ma:122 - 计算 5 日移动平均线完成
+2026-03-18 21:21:09.919 | INFO     | technical_indicators:calculate_ma:122 - 计算 10 日移动平均线完成
+2026-03-18 21:21:09.920 | INFO     | technical_indicators:calculate_ma:122 - 计算 14 日移动平均线完成
+2026-03-18 21:21:09.920 | INFO     | technical_indicators:calculate_ma:122 - 计算 20 日移动平均线完成
+2026-03-18 21:21:09.921 | INFO     | technical_indicators:calculate_ma:122 - 计算 30 日移动平均线完成
+2026-03-18 21:21:09.921 | INFO     | technical_indicators:calculate_ma:122 - 计算 45 日移动平均线完成
+2026-03-18 21:21:09.922 | INFO     | technical_indicators:calculate_rsi:186 - 计算 6 日RSI完成
+2026-03-18 21:21:09.923 | INFO     | technical_indicators:calculate_rsi:186 - 计算 12 日RSI完成
+2026-03-18 21:21:09.924 | INFO     | technical_indicators:calculate_rsi:186 - 计算 24 日RSI完成
+2026-03-18 21:21:09.925 | INFO     | technical_indicators:calculate_kdj:317 - 计算KDJ完成：K周期=9, D周期=3, J周期=3
+2026-03-18 21:21:09.926 | INFO     | technical_indicators:calculate_boll:268 - 计算布林带完成：周期=20, 标准差倍数=2.0
+2026-03-18 21:21:09.926 | INFO     | technical_indicators:calculate_macd:228 - 计算MACD完成：快线=12, 慢线=26, 信号线=9
+2026-03-18 21:21:09.994 | INFO     | technical_indicators:calculate_cci:413 - 计算 20 日CCI完成
+2026-03-18 21:21:09.994 | INFO     | technical_indicators:calculate_all:503 - 完成计算 20 个技术指标

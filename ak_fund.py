@@ -1,15 +1,18 @@
 import akshare as ak
 import pandas as pd
-import numpy as np
 import json
 import time
 import os
-from typing import Dict, List, Optional, Union, Any
+from typing import Dict, Any, Callable, Tuple
 from datetime import datetime, timedelta
+from functools import wraps
 from loguru import logger
 
 # 配置日志
-logger.add("ak_fund.log", rotation="10 MB", retention="30 days", level="INFO")
+_LOGGER_SINK = os.path.abspath("ak_fund.log")
+if not globals().get("_AK_FUND_LOGGER_CONFIGURED", False):
+    logger.add(_LOGGER_SINK, rotation="10 MB", retention="30 days", level="INFO")
+    _AK_FUND_LOGGER_CONFIGURED = True
 
 class AkFund:
     """
@@ -27,6 +30,9 @@ class AkFund:
         self.retry_count = self.config.get('retry_count', 3)
         self.retry_interval = self.config.get('retry_interval', 2)
         self.storage_path = self.config.get('storage_path', './data')
+        self.cache_ttl = int(self.config.get('cache_ttl', 60))
+        self.max_cache_size = int(self.config.get('max_cache_size', 128))
+        self._cache: Dict[str, Tuple[datetime, Any]] = {}
         
         # 创建存储目录
         os.makedirs(self.storage_path, exist_ok=True)
@@ -46,6 +52,8 @@ class AkFund:
             'retry_interval': 2,
             'storage_path': './data',
             'update_frequency': 60,  # 秒
+            'cache_ttl': 60,
+            'max_cache_size': 128,
             'data_sources': {
                 'stock': 'akshare',
                 'fund': 'akshare'
@@ -56,17 +64,25 @@ class AkFund:
             try:
                 with open(config_path, 'r', encoding='utf-8') as f:
                     config = json.load(f)
-                # 合并默认配置和用户配置
-                for key, value in default_config.items():
-                    if key not in config:
-                        config[key] = value
-                return config
+                return self._merge_dict(default_config, config)
             except Exception as e:
                 logger.error(f"加载配置文件失败: {e}")
                 return default_config
         else:
             logger.warning(f"配置文件 {config_path} 不存在，使用默认配置")
             return default_config
+
+    def _merge_dict(self, base: Dict[str, Any], override: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        深度合并字典，保留默认配置的同时允许用户覆盖。
+        """
+        merged = dict(base)
+        for key, value in override.items():
+            if isinstance(value, dict) and isinstance(merged.get(key), dict):
+                merged[key] = self._merge_dict(merged[key], value)
+            else:
+                merged[key] = value
+        return merged
     
     def _retry_decorator(self, func):
         """
@@ -78,6 +94,7 @@ class AkFund:
         Returns:
             装饰后的函数
         """
+        @wraps(func)
         def wrapper(*args, **kwargs):
             for i in range(self.retry_count):
                 try:
@@ -90,6 +107,51 @@ class AkFund:
                         logger.error(f"所有尝试都失败: {e}")
                         raise
         return wrapper
+
+    def _get_cached_or_fetch(self, key: str, fetcher: Callable[[], Any], ttl_seconds: int = None) -> Any:
+        """
+        Get data from in-memory cache first, then fallback to fetcher.
+        """
+        self._evict_expired_cache()
+
+        ttl = self.cache_ttl if ttl_seconds is None else ttl_seconds
+        now = datetime.now()
+        cached = self._cache.get(key)
+
+        if cached:
+            cached_at, cached_value = cached
+            if (now - cached_at).total_seconds() < ttl:
+                return cached_value
+
+        value = fetcher()
+        if len(self._cache) >= self.max_cache_size:
+            oldest_key = min(self._cache.items(), key=lambda item: item[1][0])[0]
+            self._cache.pop(oldest_key, None)
+        self._cache[key] = (now, value)
+        return value
+
+    def _evict_expired_cache(self) -> None:
+        """
+        清理过期缓存项，避免缓存无限增长。
+        """
+        now = datetime.now()
+        expired_keys = [
+            key for key, (cached_at, _) in self._cache.items()
+            if (now - cached_at).total_seconds() >= self.cache_ttl
+        ]
+        for key in expired_keys:
+            self._cache.pop(key, None)
+
+    def _normalize_date_range(self, start_date: str = None, end_date: str = None) -> Tuple[str, str]:
+        """
+        Normalize date range, defaults to the latest 1 year.
+        """
+        if end_date is None:
+            end_date = datetime.now().strftime('%Y-%m-%d')
+        if start_date is None:
+            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+        return start_date, end_date
+
     
     # 重新定义装饰器的使用方式
     def get_stock_realtime(self, symbol: str) -> pd.DataFrame:
@@ -106,17 +168,21 @@ class AkFund:
         def inner():
             logger.info(f"获取股票 {symbol} 实时行情")
             try:
-                # 尝试多种方法获取实时行情
+                # 全市场快照请求成本较高，优先使用短时缓存。
                 try:
-                    data = ak.stock_zh_a_spot_em()
-                    data = data[data['代码'] == symbol]
+                    snapshot = self._get_cached_or_fetch(
+                        key='stock_zh_a_spot_em_snapshot',
+                        fetcher=ak.stock_zh_a_spot_em,
+                        ttl_seconds=10
+                    )
+                    data = snapshot[snapshot['代码'] == symbol]
                 except Exception:
-                    try:
-                        data = ak.stock_zh_a_spot()
-                        data = data[data['symbol'] == symbol]
-                    except Exception as e:
-                        logger.error(f"获取实时行情失败: {e}")
-                        raise
+                    snapshot = self._get_cached_or_fetch(
+                        key='stock_zh_a_spot_snapshot',
+                        fetcher=ak.stock_zh_a_spot,
+                        ttl_seconds=10
+                    )
+                    data = snapshot[snapshot['symbol'] == symbol]
                 
                 if data.empty:
                     logger.warning(f"未找到股票 {symbol} 的实时行情数据")
@@ -158,16 +224,14 @@ class AkFund:
         Returns:
             K线数据
         """
-        # 默认时间范围
-        if end_date is None:
-            end_date = datetime.now().strftime('%Y-%m-%d')
-        if start_date is None:
-            # 默认获取1年数据
-            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+        start_date, end_date = self._normalize_date_range(start_date, end_date)
         
         # 格式化日期为YYYYMMDD格式
         start_date_fmt = start_date.replace('-', '')
         end_date_fmt = end_date.replace('-', '')
+
+        if period not in {'daily', 'weekly', 'monthly'}:
+            raise ValueError(f"不支持的周期: {period}")
         
         @self._retry_decorator
         def inner():
@@ -179,14 +243,13 @@ class AkFund:
             # 尝试1：使用东方财富数据源（原始接口）
             try:
                 logger.info(f"尝试使用东方财富数据源获取 {symbol} K线数据")
-                if period == 'daily':
-                    data = ak.stock_zh_a_hist(symbol=symbol, period="daily", start_date=start_date, end_date=end_date, adjust="qfq")
-                elif period == 'weekly':
-                    data = ak.stock_zh_a_hist(symbol=symbol, period="weekly", start_date=start_date, end_date=end_date, adjust="qfq")
-                elif period == 'monthly':
-                    data = ak.stock_zh_a_hist(symbol=symbol, period="monthly", start_date=start_date, end_date=end_date, adjust="qfq")
-                else:
-                    raise ValueError(f"不支持的周期: {period}")
+                data = ak.stock_zh_a_hist(
+                    symbol=symbol,
+                    period=period,
+                    start_date=start_date,
+                    end_date=end_date,
+                    adjust="qfq"
+                )
                 
                 if not data.empty:
                     logger.info(f"东方财富数据源成功获取 {len(data)} 条数据")
@@ -300,9 +363,12 @@ class AkFund:
             logger.info(f"获取基金 {fund_code} 基本信息")
             
             try:
-                # 使用更通用的方法获取基金信息
-                # 尝试获取基金列表，然后筛选
-                fund_list = ak.fund_name_em()
+                # 基金列表变化频率较低，缓存后可减少重复请求。
+                fund_list = self._get_cached_or_fetch(
+                    key='fund_name_em_list',
+                    fetcher=ak.fund_name_em,
+                    ttl_seconds=300
+                )
                 fund_info = fund_list[fund_list['基金代码'] == fund_code]
                 return fund_info
             except Exception as e:
@@ -322,12 +388,7 @@ class AkFund:
         Returns:
             基金历史净值数据
         """
-        # 默认时间范围
-        if end_date is None:
-            end_date = datetime.now().strftime('%Y-%m-%d')
-        if start_date is None:
-            # 默认获取1年数据
-            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
+        start_date, end_date = self._normalize_date_range(start_date, end_date)
         
         @self._retry_decorator
         def inner():
@@ -428,17 +489,16 @@ class AkFund:
                 # 获取基金排名数据
                 data = ak.fund_rank_em(date=date)
                 
-                # 根据排名类型筛选
-                if rank_type == 'return_1y':
-                    data = data.sort_values('近1年', ascending=False)
-                elif rank_type == 'return_2y':
-                    data = data.sort_values('近2年', ascending=False)
-                elif rank_type == 'return_3y':
-                    data = data.sort_values('近3年', ascending=False)
-                elif rank_type == 'return_5y':
-                    data = data.sort_values('近5年', ascending=False)
-                else:
+                rank_column_map = {
+                    'return_1y': '近1年',
+                    'return_2y': '近2年',
+                    'return_3y': '近3年',
+                    'return_5y': '近5年',
+                }
+                rank_column = rank_column_map.get(rank_type)
+                if not rank_column:
                     raise ValueError(f"不支持的排名类型: {rank_type}")
+                data = data.sort_values(rank_column, ascending=False)
                 
                 return data
             except Exception as e:
@@ -470,32 +530,40 @@ class AkFund:
             # 复制数据以避免修改原始数据
             processed_data = data.copy()
             
-            # 通用处理：去除空值
-            processed_data = processed_data.dropna()
+            # 仅剔除整行空值，避免过早丢弃有用数据。
+            processed_data = processed_data.dropna(how='all')
             
-            # 数据类型特定处理
-            if data_type == 'stock_realtime':
-                # 处理股票实时行情数据
-                if '代码' in processed_data.columns:
-                    processed_data['代码'] = processed_data['代码'].astype(str)
-                if '最新价' in processed_data.columns:
-                    processed_data['最新价'] = pd.to_numeric(processed_data['最新价'], errors='coerce')
-            
-            elif data_type == 'stock_kline':
-                # 处理K线数据
-                if '日期' in processed_data.columns:
-                    processed_data['日期'] = pd.to_datetime(processed_data['日期'])
-                for col in ['开盘', '最高', '最低', '收盘', '成交量', '成交额']:
-                    if col in processed_data.columns:
-                        processed_data[col] = pd.to_numeric(processed_data[col], errors='coerce')
-            
-            elif data_type == 'fund_nav':
-                # 处理基金净值数据
-                if '净值日期' in processed_data.columns:
-                    processed_data['净值日期'] = pd.to_datetime(processed_data['净值日期'])
-                for col in ['单位净值', '累计净值', '日增长率']:
-                    if col in processed_data.columns:
-                        processed_data[col] = pd.to_numeric(processed_data[col], errors='coerce')
+            convert_rules = {
+                'stock_realtime': {
+                    'datetime_cols': [],
+                    'numeric_cols': ['最新价'],
+                    'string_cols': ['代码'],
+                },
+                'stock_kline': {
+                    'datetime_cols': ['日期'],
+                    'numeric_cols': ['开盘', '最高', '最低', '收盘', '成交量', '成交额'],
+                    'string_cols': [],
+                },
+                'fund_nav': {
+                    'datetime_cols': ['净值日期'],
+                    'numeric_cols': ['单位净值', '累计净值', '日增长率'],
+                    'string_cols': [],
+                },
+            }
+            rule = convert_rules.get(data_type, {'datetime_cols': [], 'numeric_cols': [], 'string_cols': []})
+
+            for col in rule['string_cols']:
+                if col in processed_data.columns:
+                    processed_data[col] = processed_data[col].astype(str)
+            for col in rule['datetime_cols']:
+                if col in processed_data.columns:
+                    processed_data[col] = pd.to_datetime(processed_data[col], errors='coerce')
+            for col in rule['numeric_cols']:
+                if col in processed_data.columns:
+                    processed_data[col] = pd.to_numeric(processed_data[col], errors='coerce')
+
+            # 类型转换后再剔除全空行。
+            processed_data = processed_data.dropna(how='all')
             
             # 去除重复行
             processed_data = processed_data.drop_duplicates()
