@@ -591,7 +591,9 @@ class GoldenCrossAnalyzer:
 
 if __name__ == "__main__":
     # 示例用法
-    from ak_fund import AkFund
+    import sys
+    sys.path.append('.')
+    from src.core.data_fetcher import AkFund
     
     # 获取股票数据
     ak_fund = AkFund()

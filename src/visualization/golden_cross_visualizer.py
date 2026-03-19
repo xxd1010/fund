@@ -716,7 +716,7 @@ def function_formatter(params):
     if isinstance(params, list) and len(params) > 0:
         param = params[0]
         if param.seriesName == '金叉强度' or param.seriesName == '死叉强度':
-            return f"日期: {{param.name}}<br/>信号类型: {{param.seriesName}}<br/>强度: {{param.value:.2f}}"
+            return f"日期: {param.name}<br/>信号类型: {param.seriesName}<br/>强度: {param.value:.2f}"
         elif param.seriesName == '单笔收益' or param.seriesName == '累计收益':
-            return f"日期: {{param.name}}<br/>{{param.seriesName}}: {{param.value:.2f}}%"
+            return f"日期: {param.name}<br/>{param.seriesName}: {param.value:.2f}%"
     return str(params)

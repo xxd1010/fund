@@ -1,0 +1,6 @@
+﻿指标,信号类型,强度,描述,当前值
+RSI,buy,39.5%,RSI(6)超卖 (18.1 < 30),18.141592920353958
+RSI,buy,68.8%,RSI(12)超卖 (9.4 < 30),9.350434422838248
+BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(67.75), 'upper': np.float64(95.2736654556667), 'middle': np.float64(80.3405), 'lower': np.float64(65.40733454433331)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20下方（偏弱）,"{'close': np.float64(67.75), 'ma_values': {5: np.float64(71.946), 10: np.float64(74.673), 20: np.float64(80.3405), 30: np.float64(77.80300000000001), 60: np.float64(74.19)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(5241843.0), 'avg_volume': np.float64(7808325.6), 'price_change': np.float64(-3.6273115220483607)}"

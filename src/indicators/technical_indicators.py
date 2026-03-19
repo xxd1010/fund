@@ -29,10 +29,21 @@ class TechnicalIndicators:
         self._validate_data(data)
         self.data = data.copy()
         self.indicators = {}
-        self.period_kdj = [9, 3, 3]
         self.period_ma = [5, 10, 20, 30, 60, 120, 250]
+        self.period_sma = [5, 10, 20, 30, 60, 120, 250]
         self.period_ema = [12, 26]
         self.period_rsi = [6, 12, 24]
+        self.period_macd = ['12-26-9', '12-26-12']
+        self.period_boll_std = ['20-2', '26-2']
+        self.period_kdj = ['9-3-3','10-3-3']
+        self.period_atr = [10]
+        self.period_obv = [10]
+        self.period_cci = [20, 26]
+        self.period_williams_r = [10]
+        self.period_bias = [5, 10, 20, 30, 60, 120, 250]
+        self.period_psy = [10]
+        self.period_vwap = [10]
+        
 
     def _validate_data(self, data: pd.DataFrame) -> None:
         """
@@ -121,6 +132,30 @@ class TechnicalIndicators:
 
         logger.info(f"计算 {period} 日移动平均线完成")
         return ma
+
+    def calculate_sma(self, period: int = 20,
+                     column: str = 'close') -> pd.Series:
+        """
+        计算简单移动平均线 (Simple Moving Average)
+        
+        计算公式：SMA = (P1 + P2 + ... + Pn) / n
+        其中P为价格，n为周期
+        
+        Args:
+            period: 计算周期，默认20日
+            column: 计算列名，默认收盘价
+            
+        Returns:
+            简单移动平均线序列
+        """
+        if period <= 0:
+            raise ValueError("周期必须大于0")
+
+        data = self._get_column(column)
+        sma = data.rolling(window=period).mean()
+
+        logger.info(f"计算 {period} 日简单移动平均线完成")
+        return sma
 
     def calculate_ema(self, period: int = 12,
                       column: str = 'close') -> pd.Series:
@@ -288,10 +323,8 @@ class TechnicalIndicators:
         Returns:
             (K, D, J) 元组
         """
-        if self.period_kdj is None:
-            self.period_kdj = [k_period, d_period, j_period]
-        k_period, d_period, j_period = self.period_kdj
-        if k_period <= 0 or d_period <= 0 or j_period <= 0:
+        # 参数校验与设置
+        if any(p <= 0 for p in [k_period, d_period, j_period]):
             raise ValueError("周期必须大于0")
 
         high = self._get_column('high')
@@ -443,62 +476,166 @@ class TechnicalIndicators:
         logger.info(f"计算 {period} 日威廉指标完成")
         return williams_r
 
+    def calculate_bias(self, period: int = 5) -> pd.Series:
+        """
+        计算乖离率 (Bias)
+        
+        计算公式：BIAS = (收盘价 - 移动平均线) / 移动平均线
+        
+        Args:
+            period: 计算周期，默认5日
+            
+        Returns:
+            乖离率序列
+        """
+        if period <= 0:
+            raise ValueError("周期必须大于0")
+
+        close = self._get_column('close')
+        ma = self.calculate_ma(period)
+
+        # 计算乖离率
+        bias = (close - ma) / ma
+
+        logger.info(f"计算 {period} 日乖离率完成")
+        return bias
+        
+    def calculate_psy(self, period: int = 12) -> pd.Series:
+        """
+        计算心理线 (PSY)
+        
+        计算公式：PSY = 100 × (今日收盘价 / 昨日收盘价) ^ 周期
+        
+        Args:
+            period: 计算周期，默认12日
+            
+        Returns:
+            心理线序列
+        """
+        if period <= 0:
+            raise ValueError("周期必须大于0")
+
+        close = self._get_column('close')
+
+        # 计算心理线
+        psy = (close / close.shift(1)) ** period * 100
+
+        logger.info(f"计算 {period} 日心理线完成")
+        return psy
+    
+    def calculate_vwap(self) -> pd.Series:
+        """
+        计算成交量加权平均价格 (VWAP)
+        
+        计算公式：VWAP = ∑(今日收盘价 × 今日成交量) / ∑(今日成交量)
+        
+        Returns:
+            VWAP序列
+        """
+        close = self._get_column('close')
+        volume = self._get_column('volume')
+
+        # 计算VWAP
+        vwap = (close * volume).cumsum() / volume.cumsum()
+
+        logger.info("计算VWAP完成")
+        return vwap
+        
     def calculate_all(self,
                       indicators: Optional[List[str]] = None) -> pd.DataFrame:
         """
-        计算所有技术指标
+        计算所有技术指标（优化版本）
         
         Args:
             indicators: 要计算的指标列表，None表示计算所有指标
-                      可选值：['ma', 'ema', 'rsi', 'macd', 'boll', 'kdj', 'atr', 'obv', 'cci', 'williams_r']
+                      可选值：['ma', 'sma', 'ema', 'rsi', 'macd', 'boll', 'kdj', 'atr',
+                          'obv', 'cci', 'williams_r', 'bias', 'psy', 'vwap']
             
         Returns:
             包含所有计算指标的DataFrame
         """
         if indicators is None:
-            indicators = ['ma', 'ema', 'rsi', 'macd', 'boll', 'kdj', 'atr',
-                          'obv', 'cci', 'williams_r']
+            indicators = ['ma', 'sma', 'ema', 'rsi', 'macd', 'boll', 'kdj', 'atr',
+                          'obv', 'cci', 'williams_r', 'bias', 'psy', 'vwap']
 
-        result = pd.DataFrame()
+        result = pd.DataFrame(index=self.data.index)
 
         for indicator in indicators:
             try:
+                # 计算MA指标
                 if indicator == 'ma':
                     for period in self.period_ma:
                         result[f'MA{period}'] = self.calculate_ma(period)
+                # 计算SMA指标
+                elif indicator == 'sma':
+                    for period in self.period_sma:
+                        result[f'SMA{period}'] = self.calculate_sma(period)
+                # 计算EMA指标
                 elif indicator == 'ema':
                     for period in self.period_ema:
                         result[f'EMA{period}'] = self.calculate_ema(period)
+                # 计算RSI指标
                 elif indicator == 'rsi':
                     for period in self.period_rsi:
                         result[f'RSI{period}'] = self.calculate_rsi(period)
                 elif indicator == 'macd':
-                    dif, dea, macd = self.calculate_macd()
-                    result['DIF'] = dif
-                    result['DEA'] = dea
-                    result['MACD'] = macd
+                    for period in self.period_macd:
+                        fast_period, slow_period, signal_period = map(int, period.split('-'))
+                        dif, dea, macd = self.calculate_macd(
+                            fast_period=fast_period,
+                            slow_period=slow_period,
+                            signal_period=signal_period
+                        )
+                        result[f'DIF{period}'] = dif
+                        result[f'DEA{period}'] = dea
+                        result[f'MACD{period}'] = macd
                 elif indicator == 'boll':
-                    upper, middle, lower = self.calculate_boll()
-                    result['BOLL_UPPER'] = upper
-                    result['BOLL_MIDDLE'] = middle
-                    result['BOLL_LOWER'] = lower
+                    for period_std in self.period_boll_std:
+                        period, std_dev = map(int, period_std.split('-'))
+                        upper, middle, lower = self.calculate_boll(
+                            period=period,
+                            std_dev=std_dev
+                        )
+                        result[f'BOLL_UPPER{period_std}'] = upper
+                        result[f'BOLL_MIDDLE{period_std}'] = middle
+                        result[f'BOLL_LOWER{period_std}'] = lower
                 elif indicator == 'kdj':
-                    k, d, j = self.calculate_kdj()
-                    result['K'] = k
-                    result['D'] = d
-                    result['J'] = j
+                    for period_kdj in self.period_kdj:
+                        period_k, period_d, period_j = map(int, period_kdj.split('-'))
+                        k, d, j = self.calculate_kdj(period_k, period_d, period_j)
+                        result[f'K{period_kdj}'] = k
+                        result[f'D{period_kdj}'] = d
+                        result[f'J{period_kdj}'] = j
                 elif indicator == 'atr':
-                    result['ATR'] = self.calculate_atr()
+                    for period in self.period_atr:
+                        result[f'ATR{period}'] = self.calculate_atr(period)
                 elif indicator == 'obv':
+                    # OBV不需要周期参数
                     result['OBV'] = self.calculate_obv()
                 elif indicator == 'cci':
+                    # CCI不需要周期参数（使用默认周期）
                     result['CCI'] = self.calculate_cci()
+                # 计算Williams %R指标
                 elif indicator == 'williams_r':
-                    result['Williams_R'] = self.calculate_williams_r()
+                    for period in self.period_williams_r:
+                        result[f'Williams_R{period}'] = self.calculate_williams_r(period)
+                # 计算BIAS乖离率指标
+                elif indicator == 'bias':
+                    for period in self.period_bias:
+                        result[f'BIAS{period}'] = self.calculate_bias(period)
+                # 计算PSY心理线指标
+                elif indicator == 'psy':
+                    for period in self.period_psy:
+                        result[f'PSY{period}'] = self.calculate_psy(period)
+                # 计算VWAP成交量加权平均价
+                elif indicator == 'vwap':
+                    # VWAP不需要周期参数
+                    result['VWAP'] = self.calculate_vwap()
                 else:
                     logger.warning(f"未知的指标类型: {indicator}")
             except Exception as e:
                 logger.error(f"计算指标 {indicator} 时出错: {e}")
+                continue
 
         logger.info(f"完成计算 {len(result.columns)} 个技术指标")
         return result
