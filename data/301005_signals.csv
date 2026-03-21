@@ -1,0 +1,6 @@
+﻿指标,信号类型,强度,描述,当前值
+KDJ,buy,99.5%,KDJ(9-3-3)金叉,"{'K': np.float64(23.260188798357436), 'D': np.float64(21.24581811370622), 'J': np.float64(27.28893016765987)}"
+KDJ,buy,99.5%,KDJ(10-3-3)金叉,"{'K': np.float64(23.017807135700355), 'D': np.float64(21.027646605985012), 'J': np.float64(26.998128195131045)}"
+BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(148.8), 'upper': np.float64(180.6287143086536), 'middle': np.float64(160.282), 'lower': np.float64(139.93528569134642)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20下方（偏弱）,"{'close': np.float64(148.8), 'ma_values': {5: np.float64(146.412), 10: np.float64(155.379), 20: np.float64(160.282), 30: np.float64(164.78633333333335), 60: np.float64(162.94083333333336)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(78919.0), 'avg_volume': np.float64(92538.2), 'price_change': np.float64(-1.9762845849802368)}"

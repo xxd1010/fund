@@ -1,0 +1,5 @@
+﻿指标,信号类型,强度,描述,当前值
+MACD,buy,95.8%,MACD(12-26-9)金叉,"{'DIF': np.float64(-5.927832582675364), 'DEA': np.float64(-6.157058089083088)}"
+BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(461.63), 'upper': np.float64(494.38457824821137), 'middle': np.float64(465.6985000000001), 'lower': np.float64(437.0124217517888)}"
+MA,buy,60.0%,均线多头排列（5 < 10 < 20 < 30 < 60）,"{'close': np.float64(461.63), 'ma_values': {5: np.float64(457.334), 10: np.float64(458.16700000000003), 20: np.float64(465.6985000000001), 30: np.float64(468.468), 60: np.float64(476.91083333333336)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(51043.0), 'avg_volume': np.float64(70493.35), 'price_change': np.float64(-0.17731646664504125)}"
