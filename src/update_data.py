@@ -3,7 +3,6 @@
 重新下载基金持仓和股票K线数据
 """
 
-import logging
 import os
 from typing import List, Dict, Any
 from tqdm import tqdm
@@ -13,8 +12,7 @@ from src.core.data_fetcher import AkFund
 from src.data.reader import DataReader
 from src.analysis.quarter_filter import filter_latest_quarter_data
 from src.notify import notify, MessagePriority
-
-logger = logging.getLogger(__name__)
+from src.utils.logger import logger
 
 
 def update_data(fund_codes: List[str], start_date: str, data_dir: str) -> Dict[str, Any]:
@@ -180,7 +178,7 @@ def update_data(fund_codes: List[str], start_date: str, data_dir: str) -> Dict[s
         return total_results
         
     except Exception as e:
-        logger.error(f"数据更新过程中出错: {e}", exc_info=True)
+        logger.error(f"数据更新过程中出错: {e}")
         notify.send(f"❌ 数据更新失败: {str(e)[:100]}", priority=MessagePriority.HIGH)
         return {
             'status': 'failed',
@@ -211,10 +209,8 @@ if __name__ == "__main__":
     import sys
     sys.path.append('.')
     
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-    )
+    from src.utils.logger import setup_logger
+    setup_logger(level="INFO")
     
     test_fund_codes = ['005538', '015790']
     test_start_date = '2021-01-01'

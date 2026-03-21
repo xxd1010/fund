@@ -5,9 +5,10 @@
 
 import pandas as pd
 import numpy as np
-import re
 from typing import Tuple, Optional
 from loguru import logger
+
+from src.utils import parse_quarter_string
 
 
 def filter_latest_quarter_data(df: pd.DataFrame, quarter_column: str = '季度') -> pd.DataFrame:
@@ -78,79 +79,6 @@ def filter_latest_quarter_data(df: pd.DataFrame, quarter_column: str = '季度')
     return filtered_df
 
 
-def parse_quarter_string(quarter_str: str) -> Tuple[int, int]:
-    """
-    解析季度字符串，提取年份和季度信息
-    
-    支持的格式：
-    - "YYYY年Q季度股票投资明细" (例如: "2025年1季度股票投资明细")
-    - "YYYY年Q季度" (例如: "2025年Q1")
-    - "YYYY-Q季度" (例如: "2025-Q1")
-    - "YYYYQ季度" (例如: "2025Q1")
-    
-    Args:
-        quarter_str: 季度字符串
-        
-    Returns:
-        (年份, 季度) 元组
-        
-    Raises:
-        ValueError: 当字符串格式无法解析时
-        AttributeError: 当输入不是字符串时
-    """
-    if not isinstance(quarter_str, str):
-        raise AttributeError(f"季度信息必须是字符串类型，实际类型: {type(quarter_str)}")
-    
-    quarter_str = quarter_str.strip()
-    
-    # 尝试不同的格式模式
-    
-    # 模式1: "YYYY年Q季度股票投资明细" 或 "YYYY年Q季度"
-    pattern1 = r'(\d{4})\s*年\s*(\d+)\s*季度'
-    match1 = re.search(pattern1, quarter_str)
-    if match1:
-        year = int(match1.group(1))
-        quarter = int(match1.group(2))
-        if 1 <= quarter <= 4:
-            return year, quarter
-    
-    # 模式2: "YYYY年Q季度" (Q1, Q2, Q3, Q4)
-    pattern2 = r'(\d{4})\s*年\s*Q([1-4])'
-    match2 = re.search(pattern2, quarter_str)
-    if match2:
-        year = int(match2.group(1))
-        quarter = int(match2.group(2))
-        return year, quarter
-    
-    # 模式3: "YYYY-Q季度" (例如: 2025-Q1)
-    pattern3 = r'(\d{4})-Q([1-4])'
-    match3 = re.search(pattern3, quarter_str)
-    if match3:
-        year = int(match3.group(1))
-        quarter = int(match3.group(2))
-        return year, quarter
-    
-    # 模式4: "YYYYQ季度" (例如: 2025Q1)
-    pattern4 = r'(\d{4})Q([1-4])'
-    match4 = re.search(pattern4, quarter_str)
-    if match4:
-        year = int(match4.group(1))
-        quarter = int(match4.group(2))
-        return year, quarter
-    
-    # 模式5: "YYYY年Q季度" (中文数字)
-    pattern5 = r'(\d{4})\s*年\s*([一二三四])\s*季度'
-    match5 = re.search(pattern5, quarter_str)
-    if match5:
-        year = int(match5.group(1))
-        quarter_chinese = match5.group(2)
-        quarter_map = {'一': 1, '二': 2, '三': 3, '四': 4}
-        quarter = quarter_map.get(quarter_chinese)
-        if quarter:
-            return year, quarter
-    
-    # 如果所有模式都不匹配，抛出异常
-    raise ValueError(f"无法解析季度字符串: '{quarter_str}'")
 
 
 def get_quarter_summary(df: pd.DataFrame, quarter_column: str = '季度') -> dict:

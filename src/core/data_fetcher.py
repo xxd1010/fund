@@ -3,10 +3,26 @@ import pandas as pd
 import json
 import time
 import os
+import sys
 from typing import Dict, Any, Callable, Tuple
 from datetime import datetime, timedelta
 from functools import wraps
 from loguru import logger
+
+# 确保从任意位置运行时都能正确导入模块
+_current_dir = os.path.dirname(os.path.abspath(__file__))
+_project_root = os.path.dirname(os.path.dirname(_current_dir))
+if _project_root not in sys.path:
+    sys.path.insert(0, _project_root)
+
+from src.utils import (
+    load_config,
+    deep_merge_dict,
+    retry_decorator,
+    normalize_date_range,
+    ensure_directory_exists,
+    MemoryCache,
+)
 
 # 配置日志
 _LOGGER_SINK = os.path.abspath("ak_fund.log")
@@ -26,27 +42,6 @@ class AkFund:
         Args:
             config_path: 配置文件路径
         """
-        self.config = self._load_config(config_path)
-        self.retry_count = self.config.get('retry_count', 3)
-        self.retry_interval = self.config.get('retry_interval', 2)
-        self.storage_path = self.config.get('storage_path', './data')
-        self.cache_ttl = int(self.config.get('cache_ttl', 60))
-        self.max_cache_size = int(self.config.get('max_cache_size', 128))
-        self._cache: Dict[str, Tuple[datetime, Any]] = {}
-        
-        # 创建存储目录
-        os.makedirs(self.storage_path, exist_ok=True)
-    
-    def _load_config(self, config_path: str) -> Dict:
-        """
-        加载配置文件
-        
-        Args:
-            config_path: 配置文件路径
-            
-        Returns:
-            配置字典
-        """
         default_config = {
             'retry_count': 3,
             'retry_interval': 2,
@@ -60,97 +55,56 @@ class AkFund:
             }
         }
         
-        if os.path.exists(config_path):
-            try:
-                with open(config_path, 'r', encoding='utf-8') as f:
-                    config = json.load(f)
-                return self._merge_dict(default_config, config)
-            except Exception as e:
-                logger.error(f"加载配置文件失败: {e}")
-                return default_config
-        else:
-            logger.warning(f"配置文件 {config_path} 不存在，使用默认配置")
-            return default_config
-
-    def _merge_dict(self, base: Dict[str, Any], override: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        深度合并字典，保留默认配置的同时允许用户覆盖。
-        """
-        merged = dict(base)
-        for key, value in override.items():
-            if isinstance(value, dict) and isinstance(merged.get(key), dict):
-                merged[key] = self._merge_dict(merged[key], value)
-            else:
-                merged[key] = value
-        return merged
-    
-    def _retry_decorator(self, func):
-        """
-        重试装饰器
+        self.config = load_config(config_path, default_config)
+        self.retry_count = self.config.get('retry_count', 3)
+        self.retry_interval = self.config.get('retry_interval', 2)
+        self.storage_path = self.config.get('storage_path', './data')
+        self.cache_ttl = int(self.config.get('cache_ttl', 60))
+        self.max_cache_size = int(self.config.get('max_cache_size', 128))
+        self.cache = MemoryCache(ttl=self.cache_ttl, max_size=self.max_cache_size)
         
-        Args:
-            func: 被装饰的函数
-            
-        Returns:
-            装饰后的函数
-        """
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            for i in range(self.retry_count):
-                try:
-                    return func(*args, **kwargs)
-                except Exception as e:
-                    logger.warning(f"尝试 {i+1}/{self.retry_count} 失败: {e}")
-                    if i < self.retry_count - 1:
-                        time.sleep(self.retry_interval)
-                    else:
-                        logger.error(f"所有尝试都失败: {e}")
-                        raise
-        return wrapper
-
+        # 创建存储目录
+        os.makedirs(self.storage_path, exist_ok=True)
+    
     def _get_cached_or_fetch(self, key: str, fetcher: Callable[[], Any], ttl_seconds: int = None) -> Any:
         """
-        Get data from in-memory cache first, then fallback to fetcher.
+        从缓存获取数据，如果不存在则调用fetcher
+        
+        Args:
+            key: 缓存键
+            fetcher: 数据获取函数
+            ttl_seconds: 缓存生存时间（秒）
+            
+        Returns:
+            数据
         """
-        self._evict_expired_cache()
-
-        ttl = self.cache_ttl if ttl_seconds is None else ttl_seconds
-        now = datetime.now()
-        cached = self._cache.get(key)
-
-        if cached:
-            cached_at, cached_value = cached
-            if (now - cached_at).total_seconds() < ttl:
-                return cached_value
-
+        ttl = ttl_seconds if ttl_seconds is not None else self.cache_ttl
+        
+        # 尝试从缓存获取
+        cached_value = self.cache.get(key)
+        if cached_value is not None:
+            return cached_value
+        
+        # 调用fetcher获取数据
         value = fetcher()
-        if len(self._cache) >= self.max_cache_size:
-            oldest_key = min(self._cache.items(), key=lambda item: item[1][0])[0]
-            self._cache.pop(oldest_key, None)
-        self._cache[key] = (now, value)
+        
+        # 存入缓存
+        self.cache.set(key, value)
+        
         return value
-
-    def _evict_expired_cache(self) -> None:
-        """
-        清理过期缓存项，避免缓存无限增长。
-        """
-        now = datetime.now()
-        expired_keys = [
-            key for key, (cached_at, _) in self._cache.items()
-            if (now - cached_at).total_seconds() >= self.cache_ttl
-        ]
-        for key in expired_keys:
-            self._cache.pop(key, None)
 
     def _normalize_date_range(self, start_date: str = None, end_date: str = None) -> Tuple[str, str]:
         """
-        Normalize date range, defaults to the latest 1 year.
+        标准化日期范围
+        
+        Args:
+            start_date: 开始日期
+            end_date: 结束日期
+            
+        Returns:
+            (标准化开始日期, 标准化结束日期)
         """
-        if end_date is None:
-            end_date = datetime.now().strftime('%Y-%m-%d')
-        if start_date is None:
-            start_date = (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d')
-        return start_date, end_date
+        return normalize_date_range(start_date, end_date)
 
     
     # 重新定义装饰器的使用方式
@@ -164,7 +118,7 @@ class AkFund:
         Returns:
             实时行情数据
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取股票 {symbol} 实时行情")
             try:
@@ -203,6 +157,9 @@ class AkFund:
         Returns:
             带交易所前缀的股票代码
         """
+        # 确保股票代码是字符串类型
+        symbol = str(symbol).zfill(6)  # 转换为字符串并补齐6位
+        
         # 沪市股票代码以6开头，深市以0、3开头
         if symbol.startswith('6'):
             return f"sh{symbol}"
@@ -224,6 +181,9 @@ class AkFund:
         Returns:
             K线数据
         """
+        # 确保股票代码是字符串类型并补齐6位
+        symbol = str(symbol).zfill(6)
+        
         start_date, end_date = self._normalize_date_range(start_date, end_date)
         
         # 格式化日期为YYYYMMDD格式
@@ -233,7 +193,7 @@ class AkFund:
         if period not in {'daily', 'weekly', 'monthly'}:
             raise ValueError(f"不支持的周期: {period}")
         
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取股票 {symbol} {period} K线数据")
             
@@ -310,7 +270,7 @@ class AkFund:
         Returns:
             财务指标字典
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取股票 {symbol} 财务指标")
             
@@ -358,7 +318,7 @@ class AkFund:
         Returns:
             基金基本信息
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金 {fund_code} 基本信息")
             
@@ -390,7 +350,7 @@ class AkFund:
         """
         start_date, end_date = self._normalize_date_range(start_date, end_date)
         
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金 {fund_code} 历史净值")
             
@@ -413,7 +373,7 @@ class AkFund:
         Returns:
             基金持仓数据
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金 {fund_code} 持仓")
             
@@ -436,7 +396,7 @@ class AkFund:
         Returns:
             基金 individual_detail_hold_xq 数据
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金 {fund_code} individual_detail_hold_xq")
             try:
@@ -458,7 +418,7 @@ class AkFund:
         Returns:
             基金持仓数据
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金 {fund_code} 持仓")
 
@@ -481,7 +441,7 @@ class AkFund:
         Returns:
             基金业绩排名数据
         """
-        @self._retry_decorator
+        @retry_decorator(max_retries=self.retry_count, delay=self.retry_interval)
         def inner():
             logger.info(f"获取基金业绩排名，类型：{rank_type}")
             
@@ -594,9 +554,8 @@ class AkFund:
             directory = os.path.dirname(full_path)
             
             # 创建子目录（如果不存在）
-            if directory and not os.path.exists(directory):
-                os.makedirs(directory, exist_ok=True)
-                logger.info(f"创建目录: {directory}")
+            if directory:
+                ensure_directory_exists(directory)
             
             file_path = f"{full_path}.{file_type}"
             

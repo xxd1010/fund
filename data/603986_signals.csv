@@ -1,4 +1,4 @@
 ﻿指标,信号类型,强度,描述,当前值
-BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(303.68), 'upper': np.float64(324.1875548596338), 'middle': np.float64(294.0935), 'lower': np.float64(263.9994451403662)}"
-MA,neutral,0.0%,均线系统无明确信号；价格在MA20上方（偏强）,"{'close': np.float64(303.68), 'ma_values': {5: np.float64(299.084), 10: np.float64(289.825), 20: np.float64(294.0935), 30: np.float64(292.7973333333333), 60: np.float64(272.6633333333333)}}"
-VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(312146.0), 'avg_volume': np.float64(283344.2), 'price_change': np.float64(-2.4321285140562225)}"
+BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(290.2), 'upper': np.float64(323.26500346533953), 'middle': np.float64(293.4415), 'lower': np.float64(263.6179965346605)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20下方（偏弱）,"{'close': np.float64(290.2), 'ma_values': {5: np.float64(301.45799999999997), 10: np.float64(290.346), 20: np.float64(293.4415), 30: np.float64(292.2206666666667), 60: np.float64(274.20233333333334)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(312536.0), 'avg_volume': np.float64(283937.3), 'price_change': np.float64(-4.438883034773452)}"

@@ -1,0 +1,131 @@
+{
+  "fund_code": "000001",
+  "fund_name": "华夏成长混合",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": 0.021421559393232814,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.28832819722650227,
+  "stock_signals": [
+    {
+      "stock_code": "300308",
+      "stock_name": "中际旭创",
+      "holding_ratio": 17.604006163328197,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "002475",
+      "stock_name": "立讯精密",
+      "holding_ratio": 10.939907550077042,
+      "overall_score": -0.13627084349479696,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688347",
+      "stock_name": "华虹公司",
+      "holding_ratio": 9.899845916795067,
+      "overall_score": -0.19620155345756918,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "002371",
+      "stock_name": "北方华创",
+      "holding_ratio": 9.899845916795067,
+      "overall_score": 0.3595496093307913,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688256",
+      "stock_name": "寒武纪",
+      "holding_ratio": 9.476117103235747,
+      "overall_score": 0.023986320709839082,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "601689",
+      "stock_name": "拓普集团",
+      "holding_ratio": 9.244992295839753,
+      "overall_score": 0.12528559249786858,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "300502",
+      "stock_name": "新易盛",
+      "holding_ratio": 8.705701078582434,
+      "overall_score": -0.0023954447835154713,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688041",
+      "stock_name": "海光信息",
+      "holding_ratio": 8.281972265023112,
+      "overall_score": 0.07861874792977801,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688019",
+      "stock_name": "安集科技",
+      "holding_ratio": 8.050847457627118,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "603986",
+      "stock_name": "兆易创新",
+      "holding_ratio": 7.896764252696455,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "300308",
+      "002475",
+      "688347",
+      "002371",
+      "688256",
+      "601689",
+      "300502",
+      "688041",
+      "688019",
+      "603986"
+    ],
+    "weighted_score": 0.021421559393232814,
+    "avg_confidence": 0.28832819722650227,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 1,
+      "持有": 9,
+      "卖出": 0,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 9.899845916795067,
+      "持有": 90.10015408320493,
+      "卖出": 0.0,
+      "强烈卖出": 0.0
+    }
+  }
+}

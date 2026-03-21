@@ -1,6 +1,6 @@
 {
   "fund_codes": ["005538", "015790", "000001"],
-  "start_date": "2021-01-01",
+  "start_date": "2019-01-01",
   "data_dir": "stock_data",
   "retry_count": 3,
   "retry_interval": 2,

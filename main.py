@@ -3,7 +3,6 @@
 功能：获取基金持仓股票数据并计算技术指标
 """
 
-import logging
 import argparse
 import json
 import os
@@ -22,13 +21,7 @@ from src.analysis.quarter_filter import filter_latest_quarter_data
 from src.analysis.fund_weighted_analyzer import FundWeightedAnalyzer
 from src.notify import notify, MessagePriority
 from src.update_data import run_update_workflow
-
-# 配置日志
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
-)
-logger = logging.getLogger(__name__)
+from src.utils.logger import logger
 
 
 # 技术指标配置

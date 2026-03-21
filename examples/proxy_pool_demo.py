@@ -2,7 +2,6 @@
 代理池模块使用示例与演示
 """
 import asyncio
-import logging
 from proxy_pool import (
     ProxyPoolAPI,
     ProxyPoolConfig,
@@ -20,7 +19,7 @@ async def basic_usage_demo():
     print("=" * 50)
     
     # 配置日志
-    setup_logger(level=logging.DEBUG)
+    setup_logger(level="DEBUG")
     
     # 创建API实例
     api = ProxyPoolAPI()

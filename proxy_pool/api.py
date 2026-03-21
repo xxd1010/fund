@@ -1,9 +1,9 @@
 """
 代理池API模块 - 提供简洁易用的接口
 """
-import logging
 from typing import List, Optional, Dict, Union
 from datetime import datetime
+from loguru import logger
 
 from .models import Proxy, ProtocolType, AnonymityLevel, ProxyPoolConfig, ProxyStatus
 from .pool import ProxyPool, get_default_pool, create_pool
@@ -14,7 +14,7 @@ class ProxyPoolAPI:
     
     def __init__(self, pool: Optional[ProxyPool] = None):
         self.pool = pool or get_default_pool()
-        self.logger = logging.getLogger(__name__)
+        self.logger = logger.bind(name="proxy_pool_api")
     
     # ==================== 快速获取代理 ====================
     

@@ -2,12 +2,12 @@
 代理池管理器 - 核心模块，负责协调所有组件
 """
 import asyncio
-import logging
 import threading
 import time
 from datetime import datetime
 from typing import List, Optional, Dict, Callable
 from collections import defaultdict
+from loguru import logger
 
 from .models import Proxy, ProxyStatus, ProtocolType, AnonymityLevel, ProxyPoolConfig
 from .storage import ProxyStorage
@@ -40,8 +40,8 @@ class ProxyPool:
         self._on_fetch_callbacks: List[Callable] = []
         self._on_verify_callbacks: List[Callable] = []
         
-        # 日志
-        self.logger = logging.getLogger(__name__)
+        # 日志 - 使用 loguru
+        self.logger = logger.bind(name="proxy_pool")
         
         # 统计信息
         self.stats = {
