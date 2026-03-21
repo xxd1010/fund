@@ -7,8 +7,9 @@
 import pandas as pd
 import os
 import sys
-from typing import Dict, Any, Callable, Tuple, Optional
+from typing import Dict, Any, Callable, Tuple
 from datetime import datetime, timedelta
+from loguru import logger
 
 # 确保从任意位置运行时都能正确导入模块
 _current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -22,11 +23,16 @@ from src.utils import (
     normalize_date_range,
     ensure_directory_exists,
     MemoryCache,
-    logger,
 )
 
 # 导入新的多数据源架构
 from .data_factory import MultiSourceDataFetcher
+
+# 配置日志
+_LOGGER_SINK = os.path.abspath("ak_fund.log")
+if not globals().get("_AK_FUND_LOGGER_CONFIGURED", False):
+    logger.add(_LOGGER_SINK, rotation="10 MB", retention="30 days", level="INFO")
+    _AK_FUND_LOGGER_CONFIGURED = True
 
 
 class AkFund:
@@ -68,7 +74,7 @@ class AkFund:
         # 初始化多数据源获取器
         self.data_fetcher = MultiSourceDataFetcher(config_path)
     
-    def _get_cached_or_fetch(self, key: str, fetcher: Callable[[], Any], ttl_seconds: Optional[int] = None) -> Any:
+    def _get_cached_or_fetch(self, key: str, fetcher: Callable[[], Any], ttl_seconds: int = None) -> Any:
         """
         从缓存获取数据，如果不存在则调用fetcher
         
@@ -484,33 +490,4 @@ if __name__ == "__main__":
     try:
         # 尝试切换到 baostock
         if ak_fund.switch_stock_source('baostock'):
-            print("已切换到 baostock 数据源")
-            print(f"当前数据源: {ak_fund.get_current_sources()['stock']}")
-            
-            # 获取K线数据
-            stock_kline = ak_fund.get_stock_kline('600519', period='daily', 
-                                                 start_date='2024-01-01', end_date='2024-12-31')
-            if not stock_kline.empty:
-                processed_kline = ak_fund.process_data(stock_kline, 'stock_kline')
-                ak_fund.save_data(processed_kline, 'stock_kline_600519_baostock', 'csv')
-                print(f"股票K线数据获取成功，数据形状: {stock_kline.shape}")
-            else:
-                print("股票K线数据获取失败")
-        else:
-            print("无法切换到 baostock 数据源")
-    except Exception as e:
-        print(f"切换数据源失败: {e}")
-    
-    # 示例3：获取基金数据
-    print("\n示例3：获取基金数据...")
-    try:
-        fund_info = ak_fund.get_fund_info('000001')
-        if not fund_info.empty:
-            processed_info = ak_fund.process_data(fund_info, 'fund_info')
-            ak_fund.save_data(processed_info, 'fund_info_000001', 'csv')
-            print(f"基金信息获取成功，数据形状: {fund_info.shape}")
-            print(f"当前数据源: {ak_fund.get_current_sources()['fund']}")
-        else:
-            print("基金信息获取失败")
-    except Exception as e:
-        print(f"基金信息获取失败: {e}")
+            print

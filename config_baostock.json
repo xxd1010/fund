@@ -1,0 +1,55 @@
+{
+  "fund_codes": [
+    "005538",
+    "015790",
+    "000001"
+  ],
+  "start_date": "2019-01-01",
+  "data_dir": "stock_data",
+  "retry_count": 3,
+  "retry_interval": 2,
+  "storage_path": "./data",
+  "update_frequency": 60,
+  "cache_ttl": 60,
+  "max_cache_size": 128,
+  "data_sources": {
+    "stock": "baostock",
+    "fund": "akshare"
+  },
+  "notify": {
+    "enabled": true,
+    "default_channel": "ntfy",
+    "channels": {
+      "ntfy": {
+        "enabled": true,
+        "topic": "process-notify-001",
+        "server": "https://ntfy.sh",
+        "priority": "default",
+        "max_retries": 3,
+        "retry_delay": 1.0
+      },
+      "qq": {
+        "enabled": false,
+        "bot_token": "",
+        "group_id": "",
+        "message_type": "group",
+        "max_retries": 3,
+        "retry_delay": 1.0
+      },
+      "feishu": {
+        "enabled": false,
+        "webhook_url": "",
+        "secret": "",
+        "max_retries": 3,
+        "retry_delay": 1.0
+      }
+    },
+    "templates": {
+      "analysis_start": "🔍 开始分析基金 {fund_code}",
+      "analysis_complete": "✅ 基金 {fund_code} 分析完成\n得分: {score:.3f}\n建议: {recommendation}",
+      "error": "❌ 处理 {fund_code} 时出错: {error}",
+      "signal_detected": "🚨 检测到信号: {signal_type}\n股票: {stock_code}\n级别: {level}",
+      "fund_recommendation": "📊 基金 {fund_code} 建议: {recommendation}\n加权得分: {score:.3f}\n置信度: {confidence:.1%}"
+    }
+  }
+}

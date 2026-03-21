@@ -34,7 +34,7 @@ class TechnicalIndicators:
         self.period_ema = [12, 26]
         self.period_rsi = [6, 12, 24]
         self.period_macd = ['12-26-9', '12-26-12']
-        self.period_boll_std = ['20-2', '26-2']
+        self.period_boll_std = ['20-2']
         self.period_kdj = ['9-3-3','10-3-3']
         self.period_atr = [10]
         self.period_obv = [10]
