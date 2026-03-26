@@ -1,0 +1,131 @@
+{
+  "fund_code": "005538",
+  "fund_name": "基金005538",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": 0.15059791860782587,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.5345393335037928,
+  "stock_signals": [
+    {
+      "stock_code": "301662",
+      "stock_name": "宏工科技",
+      "holding_ratio": 12.57990283814881,
+      "overall_score": 0.1745371098872279,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688778",
+      "stock_name": "厦钨新能",
+      "holding_ratio": 12.515980567629759,
+      "overall_score": 0.2465204130984818,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688155",
+      "stock_name": "先惠技术",
+      "holding_ratio": 12.298644847864994,
+      "overall_score": 0.09606500698431528,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.8333333333333334
+    },
+    {
+      "stock_code": "300450",
+      "stock_name": "先导智能",
+      "holding_ratio": 12.119662490411658,
+      "overall_score": 0.13980867942137196,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "301617",
+      "stock_name": "博苑股份",
+      "holding_ratio": 9.588340577857323,
+      "overall_score": 0.35926957473144966,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 1.0
+    },
+    {
+      "stock_code": "688147",
+      "stock_name": "微导纳米",
+      "holding_ratio": 9.166453592431601,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688499",
+      "stock_name": "利元亨",
+      "holding_ratio": 8.795704423421117,
+      "overall_score": 0.08728222505052183,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "301150",
+      "stock_name": "中一科技",
+      "holding_ratio": 8.412170800306825,
+      "overall_score": 0.05964419475655425,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "002846",
+      "stock_name": "英联股份",
+      "holding_ratio": 8.245972896957298,
+      "overall_score": 0.12847100933985198,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "300092",
+      "stock_name": "科新机电",
+      "holding_ratio": 6.277166964970594,
+      "overall_score": 0.004651162790697682,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "301662",
+      "688778",
+      "688155",
+      "300450",
+      "301617",
+      "688147",
+      "688499",
+      "301150",
+      "002846",
+      "300092"
+    ],
+    "weighted_score": 0.15059791860782587,
+    "avg_confidence": 0.5345393335037928,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 2,
+      "持有": 8,
+      "卖出": 0,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 22.104321145487088,
+      "持有": 77.89567885451292,
+      "卖出": 0.0,
+      "强烈卖出": 0.0
+    }
+  }
+}

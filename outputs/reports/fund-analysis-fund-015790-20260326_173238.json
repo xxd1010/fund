@@ -1,0 +1,131 @@
+{
+  "fund_code": "015790",
+  "fund_name": "基金015790",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": 0.14829097018301893,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.49660621486902107,
+  "stock_signals": [
+    {
+      "stock_code": "600118",
+      "stock_name": "中国卫星",
+      "holding_ratio": 9.32,
+      "overall_score": 0.17488182874854694,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "301005",
+      "stock_name": "超捷股份",
+      "holding_ratio": 8.76,
+      "overall_score": 0.15035536238815286,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "605598",
+      "stock_name": "上海港湾",
+      "holding_ratio": 8.34,
+      "overall_score": 0.1582527565733674,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "601698",
+      "stock_name": "中国卫通",
+      "holding_ratio": 7.31,
+      "overall_score": 0.37237487358062765,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "600879",
+      "stock_name": "航天电子",
+      "holding_ratio": 7.13,
+      "overall_score": 0.176400966183575,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "300342",
+      "stock_name": "天银机电",
+      "holding_ratio": 4.75,
+      "overall_score": 0.005710466068248515,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "300136",
+      "stock_name": "信维通信",
+      "holding_ratio": 4.42,
+      "overall_score": 0.160889764505715,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "002149",
+      "stock_name": "西部材料",
+      "holding_ratio": 4.36,
+      "overall_score": 0.16205253376326206,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "300762",
+      "stock_name": "上海瀚讯",
+      "holding_ratio": 4.33,
+      "overall_score": 0.14351598173515967,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "002565",
+      "stock_name": "顺灏股份",
+      "holding_ratio": 4.14,
+      "overall_score": -0.23944424115888227,
+      "signal_level": "卖出",
+      "recommendation": "建议卖出，部分指标走弱",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "600118",
+      "301005",
+      "605598",
+      "601698",
+      "600879",
+      "300342",
+      "300136",
+      "002149",
+      "300762",
+      "002565"
+    ],
+    "weighted_score": 0.14829097018301893,
+    "avg_confidence": 0.49660621486902107,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 1,
+      "持有": 8,
+      "卖出": 1,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 11.62901686286987,
+      "持有": 81.78491886732421,
+      "卖出": 6.5860642698059175,
+      "强烈卖出": 0.0
+    }
+  }
+}

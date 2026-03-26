@@ -51,7 +51,7 @@ class SignalJudger:
     提供综合评分和交易建议
     """
     
-    def __init__(self, data: pd.DataFrame):
+    def __init__(self, data: pd.DataFrame, tech_period: Dict[str, Any]) -> None:
         """
         初始化信号判断器
         
@@ -61,6 +61,7 @@ class SignalJudger:
         """
         self._validate_data(data)
         self.data = data.copy()
+        self.tech_period = tech_period
         self.signals_history = []
     
     def _validate_data(self, data: pd.DataFrame) -> None:
@@ -162,10 +163,10 @@ class SignalJudger:
             strength=strength,
             description=description,
             value=latest_rsi,
-            threshold={'oversold': 30, 'overbought': 70}
+            threshold={'超卖': 30, '超买': 70}
         )
     
-    def check_macd_signal(self, config: str = '12-26-9') -> Signal:
+    def check_macd_signal(self, period: str = '12-26-9') -> Signal:
         """
         检查MACD信号
         
@@ -174,14 +175,14 @@ class SignalJudger:
         - DIF下穿DEA：死叉，卖出信号
         
         Args:
-            config: MACD配置，格式"快-慢-信号"
+            period: MACD周期，格式"快-慢-信号"
             
         Returns:
             Signal对象
         """
-        dif_col = f'DIF{config}'
-        dea_col = f'DEA{config}'
-        macd_col = f'MACD{config}'
+        dif_col = f'DIF{period}'
+        dea_col = f'DEA{period}'
+        macd_col = f'MACD{period}'
         
         dif = self._get_column(dif_col)
         dea = self._get_column(dea_col)
@@ -214,15 +215,15 @@ class SignalJudger:
         if diff_prev <= 0 and diff_current > 0:
             signal_type = 'buy'
             strength = self._calculate_signal_strength(diff_current, 0, abs(diff_current) + 0.01)
-            description = f"MACD({config})金叉"
+            description = f"MACD({period})金叉"
         elif diff_prev >= 0 and diff_current < 0:
             signal_type = 'sell'
             strength = self._calculate_signal_strength(diff_current, 0, abs(diff_current) + 0.01)
-            description = f"MACD({config})死叉"
+            description = f"MACD({period})死叉"
         else:
             signal_type = 'neutral'
             strength = 0.0
-            description = f"MACD({config})无交叉"
+            description = f"MACD({period})无交叉"
         
         return Signal(
             indicator='MACD',
@@ -233,7 +234,7 @@ class SignalJudger:
             threshold='cross'
         )
     
-    def check_kdj_signal(self, config: str = '9-3-3') -> Signal:
+    def check_kdj_signal(self, period: str = '9-3-3') -> Signal:
         """
         检查KDJ信号
         
@@ -249,9 +250,9 @@ class SignalJudger:
         Returns:
             Signal对象
         """
-        k_col = f'K{config}'
-        d_col = f'D{config}'
-        j_col = f'J{config}'
+        k_col = f'K{period}'
+        d_col = f'D{period}'
+        j_col = f'J{period}'
         
         k = self._get_column(k_col)
         d = self._get_column(d_col)
@@ -289,11 +290,11 @@ class SignalJudger:
         if diff_prev <= 0 and diff_current > 0:
             signal_type = 'buy'
             strength = self._calculate_signal_strength(diff_current, 0, abs(diff_current) + 0.01)
-            description = f"KDJ({config})金叉"
+            description = f"KDJ({period})金叉"
         elif diff_prev >= 0 and diff_current < 0:
             signal_type = 'sell'
             strength = self._calculate_signal_strength(diff_current, 0, abs(diff_current) + 0.01)
-            description = f"KDJ({config})死叉"
+            description = f"KDJ({period})死叉"
         
         # 检查J值超买/超卖（作为附加信息）
         if j is not None and not j.empty:
@@ -312,7 +313,7 @@ class SignalJudger:
             threshold='cross'
         )
     
-    def check_boll_signal(self, config: str = '20-2') -> Signal:
+    def check_boll_signal(self, period: str = '20-2') -> Signal:
         """
         检查布林带信号
         
@@ -328,9 +329,9 @@ class SignalJudger:
         Returns:
             Signal对象
         """
-        upper_col = f'BOLL_UPPER{config}'
-        middle_col = f'BOLL_MIDDLE{config}'
-        lower_col = f'BOLL_LOWER{config}'
+        upper_col = f'BOLL_UPPER{period}'
+        middle_col = f'BOLL_MIDDLE{period}'
+        lower_col = f'BOLL_LOWER{period}'
         
         upper = self._get_column(upper_col)
         middle = self._get_column(middle_col)
@@ -366,20 +367,20 @@ class SignalJudger:
         if latest_close > latest_upper:
             signal_type = 'sell'
             strength = self._calculate_signal_strength(latest_close, latest_upper, latest_upper - latest_middle)
-            description = f"BOLL({config})价格突破上轨"
+            description = f"BOLL({period})价格突破上轨"
         elif latest_close < latest_lower:
             signal_type = 'buy'
             strength = self._calculate_signal_strength(latest_close, latest_lower, latest_middle - latest_lower)
-            description = f"BOLL({config})价格突破下轨"
+            description = f"BOLL({period})价格突破下轨"
         else:
             # 价格在通道内，判断相对位置
             position = (latest_close - latest_lower) / (latest_upper - latest_lower + 0.01)
             if position > 0.7:
-                description = f"BOLL({config})价格接近上轨（偏强）"
+                description = f"BOLL({period})价格接近上轨（偏强）"
             elif position < 0.3:
-                description = f"BOLL({config})价格接近下轨（偏弱）"
+                description = f"BOLL({period})价格接近下轨（偏弱）"
             else:
-                description = f"BOLL({config})价格在通道中部"
+                description = f"BOLL({period})价格在通道中部"
         
         return Signal(
             indicator='BOLL',
@@ -613,36 +614,56 @@ class SignalJudger:
         
         # 收集所有信号
         signals = []
-        
+        tech_period_list = list(self.tech_period.keys())
         # RSI信号（多种周期）
-        for period in [6, 12, 24]:
-            rsi_signal = self.check_rsi_signal(period)
-            if rsi_signal.strength > 0:  # 只记录有效信号
-                signals.append(rsi_signal)
+        if 'rsi_period' in tech_period_list:
+            for period in self.tech_period['rsi_period']:
+                rsi_signal = self.check_rsi_signal(period)
+                if rsi_signal.strength > 0:  # 只记录有效信号
+                    signals.append(rsi_signal)
+        else:
+            logger.warning("未配置RSI周期，跳过RSI信号检查")
         
         # MACD信号（所有配置）
-        for config in ['12-26-9', '12-26-12']:
-            macd_signal = self.check_macd_signal(config)
-            if macd_signal.strength > 0:
-                signals.append(macd_signal)
+        if 'macd_period' in tech_period_list:
+             for period in self.tech_period['macd_period']:
+                macd_signal = self.check_macd_signal(period)
+                if macd_signal.strength > 0:
+                    signals.append(macd_signal)
+        else:
+            logger.warning("未配置MACD周期，跳过MACD信号检查")
         
         # KDJ信号（所有配置）
-        for config in ['9-3-3', '10-3-3']:
-            kdj_signal = self.check_kdj_signal(config)
-            if kdj_signal.strength > 0:
-                signals.append(kdj_signal)
+        if 'kdj_period' in tech_period_list:
+            for period in self.tech_period['kdj_period']:
+                kdj_signal = self.check_kdj_signal(period)
+                if kdj_signal.strength > 0:
+                    signals.append(kdj_signal)
+        else:
+            logger.warning("未配置KDJ周期，跳过KDJ信号检查")
         
         # 布林带信号
-        boll_signal = self.check_boll_signal('20-2')
-        signals.append(boll_signal)
+        if 'boll_period' in tech_period_list:
+            for period in self.tech_period['boll_period']:
+                boll_signal = self.check_boll_signal(period)
+                signals.append(boll_signal)
+        else:
+            logger.warning("未配置布林带周期，跳过布林带信号检查")
         
         # 均线系统信号
-        ma_signal = self.check_ma_signal([5, 10, 20, 30, 60])
-        signals.append(ma_signal)
+        if 'ma_period' in tech_period_list:
+            ma_signal = self.check_ma_signal(self.tech_period['ma_period'])
+            signals.append(ma_signal)
+        else:
+            logger.warning("未配置均线周期，跳过均线信号检查")
         
         # 成交量信号
-        volume_signal = self.check_volume_signal(20)
-        signals.append(volume_signal)
+        if 'volume_period' in tech_period_list:
+            for period in self.tech_period['volume_period']:
+                volume_signal = self.check_volume_signal(period)
+                signals.append(volume_signal)
+        else:
+            logger.warning("未配置成交量周期，跳过成交量信号检查")
         
         # 计算综合得分
         overall_score, indicator_scores = self.calculate_overall_score(signals)
@@ -674,7 +695,7 @@ class SignalJudger:
             recommendation = "建议卖出，部分指标走弱"
         else:
             recommendation = "强烈建议卖出，多项指标显示危险信号"
-        
+                   
         # 构建详细信息
         latest_date = self._get_column('date')
         date_value = latest_date.iloc[-1] if latest_date is not None and not latest_date.empty else None
@@ -730,8 +751,8 @@ class SignalJudger:
 # 示例使用
 if __name__ == "__main__":
     # 测试数据
-    from technical_indicators import TechnicalIndicators
-    from ak_fund import AkFund
+    from src.indicators.technical_indicators import TechnicalIndicators
+    from src.core.data_fetcher import AkFund
     
     # 获取股票数据并计算技术指标
     ak_fund = AkFund()

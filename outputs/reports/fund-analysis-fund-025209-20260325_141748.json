@@ -1,0 +1,131 @@
+{
+  "fund_code": "025209",
+  "fund_name": "基金025209",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": -0.04460081836547809,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.2967515548831737,
+  "stock_signals": [
+    {
+      "stock_code": "001309",
+      "stock_name": "德明利",
+      "holding_ratio": 14.42259203227433,
+      "overall_score": -0.08723321759435507,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688525",
+      "stock_name": "佰维存储",
+      "holding_ratio": 13.653555219364598,
+      "overall_score": -0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "300475",
+      "stock_name": "香农芯创",
+      "holding_ratio": 13.262733232476046,
+      "overall_score": -0.24576551569994062,
+      "signal_level": "卖出",
+      "recommendation": "建议卖出，部分指标走弱",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "301308",
+      "stock_name": "江波龙",
+      "holding_ratio": 12.24155320221886,
+      "overall_score": -0.3328833911243615,
+      "signal_level": "卖出",
+      "recommendation": "建议卖出，部分指标走弱",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "300223",
+      "stock_name": "北京君正",
+      "holding_ratio": 8.88804841149773,
+      "overall_score": 0.16377346683354205,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "603986",
+      "stock_name": "兆易创新",
+      "holding_ratio": 8.686333837619767,
+      "overall_score": 0.02741479503690934,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688627",
+      "stock_name": "精智达",
+      "holding_ratio": 7.854261220373172,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "688233",
+      "stock_name": "神工股份",
+      "holding_ratio": 7.576903681290973,
+      "overall_score": 0.2631062666740592,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688228",
+      "stock_name": "开普云",
+      "holding_ratio": 7.362581946545638,
+      "overall_score": 0.16609073359073356,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688008",
+      "stock_name": "澜起科技",
+      "holding_ratio": 6.05143721633888,
+      "overall_score": 0.1422567965935147,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "001309",
+      "688525",
+      "300475",
+      "301308",
+      "300223",
+      "603986",
+      "688627",
+      "688233",
+      "688228",
+      "688008"
+    ],
+    "weighted_score": -0.04460081836547809,
+    "avg_confidence": 0.2967515548831737,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 1,
+      "持有": 7,
+      "卖出": 2,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 7.576903681290974,
+      "持有": 66.91880988401412,
+      "卖出": 25.50428643469491,
+      "强烈卖出": 0.0
+    }
+  }
+}

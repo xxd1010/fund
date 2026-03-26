@@ -1,0 +1,5 @@
+﻿指标,信号类型,强度,描述,当前值
+MACD,sell,96.9%,MACD(12-26-9)死叉,"{'DIF': np.float64(6.920214946688986), 'DEA': np.float64(7.237987503041372)}"
+BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(327.0), 'upper': np.float64(368.46205199642435), 'middle': np.float64(319.736), 'lower': np.float64(271.00994800357563)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20上方（偏强）,"{'close': np.float64(327.0), 'ma_values': {5: np.float64(324.992), 10: np.float64(334.563), 20: np.float64(319.736), 30: np.float64(311.4786666666667)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.int64(14229661), 'avg_volume': np.float64(17857244.3), 'price_change': np.float64(-3.3002129169623915)}"

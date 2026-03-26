@@ -1,5 +1,5 @@
 {
-  "fund_codes": ["005538", "015790", "000001"],
+  "fund_codes": ["005538","015790","025491","018957","017193","025209"],
   "start_date": "2019-01-01",
   "data_dir": "stock_data",
   "retry_count": 3,
@@ -9,7 +9,7 @@
   "cache_ttl": 60,
   "max_cache_size": 128,
   "data_sources": {
-    "stock": "akshare",
+    "stock": "baostock",
     "fund": "akshare"
   },
   "notify": {
@@ -38,6 +38,14 @@
         "secret": "",
         "max_retries": 3,
         "retry_delay": 1.0
+      },
+      "markdown": {
+        "enabled": true,
+        "output_dir": "./notify_logs",
+        "file_prefix": "notify",
+        "include_timestamp": true,
+        "max_retries": 3,
+        "retry_delay": 1.0
       }
     },
     "templates": {
@@ -45,7 +53,9 @@
       "analysis_complete": "✅ 基金 {fund_code} 分析完成\n得分: {score:.3f}\n建议: {recommendation}",
       "error": "❌ 处理 {fund_code} 时出错: {error}",
       "signal_detected": "🚨 检测到信号: {signal_type}\n股票: {stock_code}\n级别: {level}",
-      "fund_recommendation": "📊 基金 {fund_code} 建议: {recommendation}\n加权得分: {score:.3f}\n置信度: {confidence:.1%}"
+      "fund_recommendation": "📊 基金 {fund_code} 建议: {recommendation}\n加权得分: {score:.3f}\n置信度: {confidence:.1%}",
+      "stock_recommendation": "📈 股票 {stock_code} 信号: {signal_level}\n得分: {score:.3f}\n建议: {recommendation}",
+      "consolidated_report": "📊 基金股票分析汇总报告\n\n💰 基金分析:\n{fund_summary}\n\n📈 股票信号:\n{stock_summary}\n\n⏰ 时间: {time}"
     }
   }
 }

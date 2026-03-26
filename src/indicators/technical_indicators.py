@@ -563,22 +563,22 @@ class TechnicalIndicators:
         for indicator in indicators:
             try:
                 # 计算MA指标
-                if indicator == 'ma':
+                if indicator == 'ma_period':
                     for period in self.period_ma:
                         result[f'MA{period}'] = self.calculate_ma(period)
                 # 计算SMA指标
-                elif indicator == 'sma':
+                elif indicator == 'sma_period':
                     for period in self.period_sma:
                         result[f'SMA{period}'] = self.calculate_sma(period)
                 # 计算EMA指标
-                elif indicator == 'ema':
+                elif indicator == 'ema_period':
                     for period in self.period_ema:
                         result[f'EMA{period}'] = self.calculate_ema(period)
                 # 计算RSI指标
-                elif indicator == 'rsi':
+                elif indicator == 'rsi_period':
                     for period in self.period_rsi:
                         result[f'RSI{period}'] = self.calculate_rsi(period)
-                elif indicator == 'macd':
+                elif indicator == 'macd_period':
                     for period in self.period_macd:
                         fast_period, slow_period, signal_period = map(int, period.split('-'))
                         dif, dea, macd = self.calculate_macd(
@@ -589,7 +589,7 @@ class TechnicalIndicators:
                         result[f'DIF{period}'] = dif
                         result[f'DEA{period}'] = dea
                         result[f'MACD{period}'] = macd
-                elif indicator == 'boll':
+                elif indicator == 'boll_period':
                     for period_std in self.period_boll_std:
                         period, std_dev = map(int, period_std.split('-'))
                         upper, middle, lower = self.calculate_boll(
@@ -599,36 +599,36 @@ class TechnicalIndicators:
                         result[f'BOLL_UPPER{period_std}'] = upper
                         result[f'BOLL_MIDDLE{period_std}'] = middle
                         result[f'BOLL_LOWER{period_std}'] = lower
-                elif indicator == 'kdj':
+                elif indicator == 'kdj_period':
                     for period_kdj in self.period_kdj:
                         period_k, period_d, period_j = map(int, period_kdj.split('-'))
                         k, d, j = self.calculate_kdj(period_k, period_d, period_j)
                         result[f'K{period_kdj}'] = k
                         result[f'D{period_kdj}'] = d
                         result[f'J{period_kdj}'] = j
-                elif indicator == 'atr':
+                elif indicator == 'atr_period':
                     for period in self.period_atr:
                         result[f'ATR{period}'] = self.calculate_atr(period)
-                elif indicator == 'obv':
+                elif indicator == 'obv_period':
                     # OBV不需要周期参数
                     result['OBV'] = self.calculate_obv()
-                elif indicator == 'cci':
+                elif indicator == 'cci_period':
                     # CCI不需要周期参数（使用默认周期）
                     result['CCI'] = self.calculate_cci()
                 # 计算Williams %R指标
-                elif indicator == 'williams_r':
+                elif indicator == 'williams_r_period':
                     for period in self.period_williams_r:
                         result[f'Williams_R{period}'] = self.calculate_williams_r(period)
                 # 计算BIAS乖离率指标
-                elif indicator == 'bias':
+                elif indicator == 'bias_period':
                     for period in self.period_bias:
                         result[f'BIAS{period}'] = self.calculate_bias(period)
                 # 计算PSY心理线指标
-                elif indicator == 'psy':
+                elif indicator == 'psy_period':
                     for period in self.period_psy:
                         result[f'PSY{period}'] = self.calculate_psy(period)
                 # 计算VWAP成交量加权平均价
-                elif indicator == 'vwap':
+                elif indicator == 'vwap_period':
                     # VWAP不需要周期参数
                     result['VWAP'] = self.calculate_vwap()
                 else:

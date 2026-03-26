@@ -1,5 +1,7 @@
 ﻿指标,信号类型,强度,描述,当前值
-RSI,buy,57.8%,RSI(6)超卖 (12.7 < 30),12.660550458715562
-BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(52.03), 'upper': np.float64(61.219954738829514), 'middle': np.float64(55.511), 'lower': np.float64(49.80204526117049)}"
-MA,buy,60.0%,均线多头排列（5 < 10 < 20 < 30 < 60）,"{'close': np.float64(52.03), 'ma_values': {5: np.float64(53.572), 10: np.float64(54.238), 20: np.float64(55.511), 30: np.float64(57.109), 60: np.float64(59.32683333333333)}}"
-VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(4418419.0), 'avg_volume': np.float64(4013765.45), 'price_change': np.float64(0.0769378726678191)}"
+RSI,buy,97.4%,RSI(6)超卖 (0.8 < 30),0.7920792079207644
+RSI,buy,26.0%,RSI(12)超卖 (22.2 < 30),22.18992248062014
+RSI,buy,7.7%,RSI(24)超卖 (27.7 < 30),27.684769293589227
+BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(48.76), 'upper': np.float64(58.901178945567366), 'middle': np.float64(53.5185), 'lower': np.float64(48.13582105443264)}"
+MA,buy,60.0%,均线多头排列（5 < 10 < 20 < 30）,"{'close': np.float64(48.76), 'ma_values': {5: np.float64(50.193999999999996), 10: np.float64(52.205999999999996), 20: np.float64(53.5185), 30: np.float64(55.663333333333334)}}"
+VOLUME,sell,65.3%,"放量下跌（量比:1.3, 跌幅:2.4%）","{'latest_volume': np.float64(5815231.0), 'avg_volume': np.float64(4451908.65), 'price_change': np.float64(-2.362835402482979)}"

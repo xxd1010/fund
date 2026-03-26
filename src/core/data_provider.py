@@ -5,14 +5,14 @@
 """
 
 from abc import ABC, abstractmethod
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 import pandas as pd
 
 
 class DataProviderBase(ABC):
     """数据源提供者基类"""
     
-    def __init__(self, config: Dict[str, Any] = None):
+    def __init__(self, config: Optional[Dict[str, Any]] = None):
         """
         初始化数据源提供者
         
@@ -43,7 +43,7 @@ class DataProviderBase(ABC):
     
     @abstractmethod
     def get_stock_kline(self, symbol: str, period: str = 'daily', 
-                        start_date: str = None, end_date: str = None) -> pd.DataFrame:
+                        start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取股票历史K线数据
         
@@ -96,8 +96,8 @@ class DataProviderBase(ABC):
         pass
     
     @abstractmethod
-    def get_fund_nav(self, fund_code: str, start_date: str = None, 
-                     end_date: str = None) -> pd.DataFrame:
+    def get_fund_nav(self, fund_code: str, start_date: Optional[str] = None, 
+                     end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金历史净值
         
@@ -112,7 +112,7 @@ class DataProviderBase(ABC):
         pass
     
     @abstractmethod
-    def get_fund_portfolio(self, fund_code: str, date: str = None) -> pd.DataFrame:
+    def get_fund_portfolio(self, fund_code: str, date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金持仓
         

@@ -1,0 +1,4 @@
+﻿指标,信号类型,强度,描述,当前值
+BOLL,neutral,0.0%,BOLL(20-2)价格接近上轨（偏强）,"{'close': np.float64(605.81), 'upper': np.float64(609.8654324346835), 'middle': np.float64(544.5505), 'lower': np.float64(479.2355675653166)}"
+MA,sell,60.0%,均线空头排列（5 > 10 > 20 > 30）,"{'close': np.float64(605.81), 'ma_values': {5: np.float64(583.7), 10: np.float64(565.478), 20: np.float64(544.5505), 30: np.float64(533.858)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.int64(1982014), 'avg_volume': np.float64(1772050.35), 'price_change': np.float64(-0.4142488451991675)}"

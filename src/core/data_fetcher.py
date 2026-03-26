@@ -388,7 +388,7 @@ class AkFund:
                     'string_cols': [],
                 },
                 'fund_portfolio': {
-                    'datetime_cols': ['报告期'],
+                    'datetime_cols': ['季度'],
                     'numeric_cols': ['持仓市值', '占净值比例'],
                     'string_cols': ['股票代码', '股票名称'],
                 }

@@ -35,6 +35,7 @@ def update_data(fund_codes: List[str], start_date: str, data_dir: str) -> Dict[s
     try:
         # 1. 更新基金持仓数据
         logger.info("步骤1: 更新基金持仓数据")
+        fund_data_list = []  # 存储基金持仓数据到内存，避免文件读写问题
         for fund_code in tqdm(fund_codes, desc="更新基金持仓", unit="只"):
             try:
                 # 获取最新基金持仓数据
@@ -47,8 +48,14 @@ def update_data(fund_codes: List[str], start_date: str, data_dir: str) -> Dict[s
                         'reason': '持仓数据为空'
                     })
                     continue
-                
-                # 保存基金持仓数据
+
+                # 保存基金持仓数据到内存列表
+                fund_data_list.append({
+                    'fund_code': fund_code,
+                    'data': fund_info
+                })
+
+                # 保存基金持仓数据到文件
                 fund_file = f"fund_portfolio_{fund_code}"
                 ak_fund.save_data(
                     fund_info,
@@ -89,24 +96,20 @@ def update_data(fund_codes: List[str], start_date: str, data_dir: str) -> Dict[s
                     'reason': str(e)
                 })
         
-        # 2. 获取所有基金的持仓股票
+        # 2. 获取所有基金的持仓股票（从内存中读取，避免文件读写问题）
         logger.info("步骤2: 获取所有基金的持仓股票")
         all_stock_codes = set()
-        
-        for fund_result in total_results['fund_results']:
-            if fund_result['status'] == 'success':
-                fund_code = fund_result['fund_code']
-                try:
-                    # 读取刚保存的基金持仓数据
-                    fund_file = f"data/fund_portfolio_{fund_code}.csv"
-                    if os.path.exists(fund_file):
-                        fund_df = pd.read_csv(fund_file)
-                        # 过滤最新季度数据
-                        quarter_data = filter_latest_quarter_data(fund_df)
-                        stock_codes = quarter_data['股票代码'].unique().tolist()
-                        all_stock_codes.update(stock_codes)
-                except Exception as e:
-                    logger.warning(f"读取基金 {fund_code} 持仓数据失败: {e}")
+
+        for fund_item in fund_data_list:
+            fund_code = fund_item['fund_code']
+            fund_df = fund_item['data']
+            try:
+                # 过滤最新季度数据
+                quarter_data = filter_latest_quarter_data(fund_df)
+                stock_codes = quarter_data['股票代码'].unique().tolist()
+                all_stock_codes.update(stock_codes)
+            except Exception as e:
+                logger.warning(f"处理基金 {fund_code} 持仓数据失败: {e}")
         
         logger.info(f"需要更新的股票数量: {len(all_stock_codes)}")
         logger.info(f"股票代码列表: {list(all_stock_codes)[:10]}{'...' if len(all_stock_codes) > 10 else ''}")

@@ -1,6 +1,6 @@
 ﻿指标,信号类型,强度,描述,当前值
-RSI,sell,25.2%,RSI(6)超买 (77.6 > 70),77.55610972568574
-MACD,buy,94.6%,MACD(12-26-12)金叉,"{'DIF': np.float64(-0.6183867423632847), 'DEA': np.float64(-0.7946750420548777)}"
-BOLL,neutral,0.0%,BOLL(20-2)价格接近上轨（偏强）,"{'close': np.float64(46.19), 'upper': np.float64(47.83959641216675), 'middle': np.float64(43.786500000000004), 'lower': np.float64(39.73340358783326)}"
-MA,neutral,0.0%,均线系统无明确信号；价格在MA20上方（偏强）,"{'close': np.float64(46.19), 'ma_values': {5: np.float64(44.072), 10: np.float64(43.160999999999994), 20: np.float64(43.786500000000004), 30: np.float64(46.068666666666665), 60: np.float64(44.1125)}}"
-VOLUME,buy,93.8%,"放量上涨（量比:1.9, 涨幅:0.9%）","{'latest_volume': np.float64(693507.0), 'avg_volume': np.float64(369796.45), 'price_change': np.float64(0.9176316364430731)}"
+RSI,sell,63.8%,RSI(6)超买 (89.1 > 70),89.14518317503395
+RSI,sell,6.5%,RSI(12)超买 (71.9 > 70),71.93528313627878
+BOLL,sell,18.8%,BOLL(20-2)价格突破上轨,"{'close': np.float64(50.73), 'upper': np.float64(49.70925997947517), 'middle': np.float64(44.266999999999996), 'lower': np.float64(38.82474002052482)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20上方（偏强）,"{'close': np.float64(50.73), 'ma_values': {5: np.float64(47.568), 10: np.float64(45.248), 20: np.float64(44.266999999999996), 30: np.float64(45.340333333333334)}}"
+VOLUME,buy,87.0%,"放量上涨（量比:1.7, 涨幅:6.7%）","{'latest_volume': np.float64(745214.0), 'avg_volume': np.float64(428081.3), 'price_change': np.float64(6.665264928511343)}"

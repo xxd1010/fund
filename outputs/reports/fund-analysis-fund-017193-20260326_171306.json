@@ -1,0 +1,181 @@
+{
+  "fund_code": "017193",
+  "fund_name": "基金017193",
+  "total_stocks": 15,
+  "analyzed_stocks": 15,
+  "weighted_score": 0.14993430822678344,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.4151934876374461,
+  "stock_signals": [
+    {
+      "stock_code": "603993",
+      "stock_name": "洛阳钼业",
+      "holding_ratio": 12.62,
+      "overall_score": 0.13519944979367246,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "600111",
+      "stock_name": "北方稀土",
+      "holding_ratio": 8.23,
+      "overall_score": 0.15219895287958124,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "601600",
+      "stock_name": "中国铝业",
+      "holding_ratio": 7.08,
+      "overall_score": 0.01306306306306304,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "000807",
+      "stock_name": "云铝股份",
+      "holding_ratio": 4.98,
+      "overall_score": 0.004890864995957944,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "600362",
+      "stock_name": "江西铜业",
+      "holding_ratio": 4.21,
+      "overall_score": 0.3205157705955143,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.8333333333333334
+    },
+    {
+      "stock_code": "000426",
+      "stock_name": "兴业银锡",
+      "holding_ratio": 3.66,
+      "overall_score": 0.3628416309459667,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "000933",
+      "stock_name": "神火股份",
+      "holding_ratio": 3.57,
+      "overall_score": 0.019936034115138543,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "000630",
+      "stock_name": "铜陵有色",
+      "holding_ratio": 3.52,
+      "overall_score": 0.18387559808612436,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "002532",
+      "stock_name": "天山铝业",
+      "holding_ratio": 3.51,
+      "overall_score": 0.16180327868852473,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "601168",
+      "stock_name": "西部矿业",
+      "holding_ratio": 3.47,
+      "overall_score": 0.3420949280957809,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688795",
+      "stock_name": "摩尔线程",
+      "holding_ratio": 0.01,
+      "overall_score": 0.1517195374497293,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688802",
+      "stock_name": "沐曦股份",
+      "holding_ratio": 0.01,
+      "overall_score": -0.10635549449850337,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "001280",
+      "stock_name": "中国铀业",
+      "holding_ratio": 0.0,
+      "overall_score": 0.31949564253392215,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688783",
+      "stock_name": "西安奕材",
+      "holding_ratio": 0.0,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688759",
+      "stock_name": "必贝特",
+      "holding_ratio": 0.0,
+      "overall_score": 0.13907582938388618,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "603993",
+      "600111",
+      "601600",
+      "000807",
+      "600362",
+      "000426",
+      "000933",
+      "000630",
+      "002532",
+      "601168",
+      "688795",
+      "688802",
+      "001280",
+      "688783",
+      "688759"
+    ],
+    "weighted_score": 0.14993430822678344,
+    "avg_confidence": 0.4151934876374461,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 4,
+      "持有": 11,
+      "卖出": 0,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 20.667031164570805,
+      "持有": 79.3329688354292,
+      "卖出": 0.0,
+      "强烈卖出": 0.0
+    }
+  }
+}

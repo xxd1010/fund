@@ -1,0 +1,181 @@
+{
+  "fund_code": "025491",
+  "fund_name": "基金025491",
+  "total_stocks": 15,
+  "analyzed_stocks": 15,
+  "weighted_score": 0.15595471447063558,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.4035498995311454,
+  "stock_signals": [
+    {
+      "stock_code": "600118",
+      "stock_name": "中国卫星",
+      "holding_ratio": 20.428667113194905,
+      "overall_score": 0.15495891389782054,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "600879",
+      "stock_name": "航天电子",
+      "holding_ratio": 18.569993302076355,
+      "overall_score": 0.17193704600484272,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "601698",
+      "stock_name": "中国卫通",
+      "holding_ratio": 11.10180843938379,
+      "overall_score": 0.15486842105263157,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688568",
+      "stock_name": "中科星图",
+      "holding_ratio": 9.276624246483589,
+      "overall_score": 0.06718815185648737,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688270",
+      "stock_name": "臻镭科技",
+      "holding_ratio": 8.221701272605491,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "300627",
+      "stock_name": "华测导航",
+      "holding_ratio": 7.484929671801741,
+      "overall_score": 0.1366228646517743,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "002151",
+      "stock_name": "北斗星通",
+      "holding_ratio": 6.932350971198926,
+      "overall_score": 0.11471322403888132,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "688375",
+      "stock_name": "国博电子",
+      "holding_ratio": 6.480241125251171,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "600435",
+      "stock_name": "北方导航",
+      "holding_ratio": 6.346282652377762,
+      "overall_score": 0.37298547529272136,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "300593",
+      "stock_name": "新雷能",
+      "holding_ratio": 5.123911587407903,
+      "overall_score": 0.18292875989445923,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688795",
+      "stock_name": "摩尔线程",
+      "holding_ratio": 0.03348961821835231,
+      "overall_score": 0.2370528212246823,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "001280",
+      "stock_name": "中国铀业",
+      "holding_ratio": 0.0,
+      "overall_score": 0.1619531545145446,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "688809",
+      "stock_name": "强一股份",
+      "holding_ratio": 0.0,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "301687",
+      "stock_name": "新广益",
+      "holding_ratio": 0.0,
+      "overall_score": -0.24070576989617112,
+      "signal_level": "卖出",
+      "recommendation": "建议卖出，部分指标走弱",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "301667",
+      "stock_name": "纳百川",
+      "holding_ratio": 0.0,
+      "overall_score": -0.19305312383523096,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "600118",
+      "600879",
+      "601698",
+      "688568",
+      "688270",
+      "300627",
+      "002151",
+      "688375",
+      "600435",
+      "300593",
+      "688795",
+      "001280",
+      "688809",
+      "301687",
+      "301667"
+    ],
+    "weighted_score": 0.15595471447063558,
+    "avg_confidence": 0.4035498995311454,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 2,
+      "持有": 12,
+      "卖出": 1,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 6.379772270596115,
+      "持有": 93.62022772940388,
+      "卖出": 0.0,
+      "强烈卖出": 0.0
+    }
+  }
+}

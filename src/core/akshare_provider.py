@@ -16,7 +16,7 @@ from .data_provider import DataProviderBase
 class AkshareProvider(DataProviderBase):
     """akshare 数据提供者"""
     
-    def __init__(self, config: Dict[str, Any] = None):
+    def __init__(self, config: Optional[Dict[str, Any]] = None):
         """
         初始化 akshare 数据提供者
         
@@ -152,7 +152,7 @@ class AkshareProvider(DataProviderBase):
             return pd.DataFrame()
     
     def get_stock_kline(self, symbol: str, period: str = 'daily', 
-                        start_date: str = None, end_date: str = None) -> pd.DataFrame:
+                        start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取股票历史K线数据
         
@@ -320,8 +320,8 @@ class AkshareProvider(DataProviderBase):
             logger.error(f"获取基金基本信息失败: {e}")
             raise
     
-    def get_fund_nav(self, fund_code: str, start_date: str = None, 
-                     end_date: str = None) -> pd.DataFrame:
+    def get_fund_nav(self, fund_code: str, start_date: Optional[str] = None, 
+                     end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金历史净值
         
@@ -355,7 +355,7 @@ class AkshareProvider(DataProviderBase):
             logger.error(f"获取基金历史净值失败: {e}")
             raise
     
-    def get_fund_portfolio(self, fund_code: str, date: str = None) -> pd.DataFrame:
+    def get_fund_portfolio(self, fund_code: str, date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金持仓
         
@@ -369,16 +369,33 @@ class AkshareProvider(DataProviderBase):
         try:
             logger.info(f"akshare 获取基金 {fund_code} 持仓")
             
-            data = ak.fund_portfolio_holdings_em(symbol=fund_code, date=date)
+            # 尝试多个可能的函数名
+            errors = []
             
-            if data.empty:
-                logger.warning(f"基金 {fund_code} 持仓数据为空")
+            # 尝试1：使用 fund_portfolio_holdings_em
+            try:
+                data = ak.fund_portfolio_hold_em(symbol=fund_code, date=date)
+                if not data.empty:
+                    logger.info(f"使用 fund_portfolio_hold_em 成功获取基金 {fund_code} 持仓")
+                    return data
+                else:
+                    errors.append("fund_portfolio_hold_em: 返回空数据")
+            except AttributeError as e:
+                errors.append(f"fund_portfolio_hold_em: {e}")
+            except Exception as e:
+                errors.append(f"fund_portfolio_hold_em: {e}")
             
-            return data
+            # 所有尝试都失败
+            error_msg = "; ".join(errors)
+            logger.error(f"所有基金持仓数据源都失败: {error_msg}")
+            
+            # 返回空DataFrame而不是抛出异常
+            logger.warning(f"无法获取基金持仓数据，返回空DataFrame")
+            return pd.DataFrame()
             
         except Exception as e:
             logger.error(f"获取基金持仓失败: {e}")
-            raise
+            return pd.DataFrame()
 
 
 if __name__ == "__main__":

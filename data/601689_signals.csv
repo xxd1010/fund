@@ -3,5 +3,5 @@ RSI,buy,94.8%,RSI(6)超卖 (1.6 < 30),1.5723270440251866
 RSI,buy,18.2%,RSI(12)超卖 (24.5 < 30),24.530075187969928
 RSI,buy,44.0%,RSI(24)超卖 (16.8 < 30),16.79777880610831
 BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(58.25), 'upper': np.float64(72.04002103675751), 'middle': np.float64(64.8155), 'lower': np.float64(57.590978963242485)}"
-MA,buy,60.0%,均线多头排列（5 < 10 < 20 < 30 < 60）,"{'close': np.float64(58.25), 'ma_values': {5: np.float64(60.67999999999999), 10: np.float64(62.415), 20: np.float64(64.8155), 30: np.float64(67.12966666666667), 60: np.float64(70.8785)}}"
-VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(225946.0), 'avg_volume': np.float64(212015.1), 'price_change': np.float64(-2.199462726662193)}"
+MA,buy,60.0%,均线多头排列（5 < 10 < 20 < 30）,"{'close': np.float64(58.25), 'ma_values': {5: np.float64(60.67999999999999), 10: np.float64(62.415), 20: np.float64(64.8155), 30: np.float64(67.12966666666667)}}"
+VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.int64(22594570), 'avg_volume': np.float64(21201501.3), 'price_change': np.float64(-2.199462726662193)}"

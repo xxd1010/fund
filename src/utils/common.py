@@ -154,8 +154,8 @@ def parse_quarter_string(quarter_str: str) -> Tuple[int, int]:
     
     # 尝试不同的格式模式
     
-    # 模式1: "YYYY年Q季度股票投资明细" 或 "YYYY年Q季度"
-    pattern1 = r'(\d{4})\s*年\s*(\d+)\s*季度'
+    # 模式1: "YYYY年Q季度股票投资明细" 或 "YYYY年Q季度" (支持"第"前缀)
+    pattern1 = r'(\d{4})\s*年\s*(?:第)?\s*(\d+)\s*季度'
     match1 = re.search(pattern1, quarter_str)
     if match1:
         year = int(match1.group(1))
@@ -187,8 +187,8 @@ def parse_quarter_string(quarter_str: str) -> Tuple[int, int]:
         quarter = int(match4.group(2))
         return year, quarter
     
-    # 模式5: "YYYY年Q季度" (中文数字)
-    pattern5 = r'(\d{4})\s*年\s*([一二三四])\s*季度'
+    # 模式5: "YYYY年Q季度" (中文数字，支持"第"前缀)
+    pattern5 = r'(\d{4})\s*年\s*(?:第)?\s*([一二三四])\s*季度'
     match5 = re.search(pattern5, quarter_str)
     if match5:
         year = int(match5.group(1))

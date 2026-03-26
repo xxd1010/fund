@@ -1,0 +1,131 @@
+{
+  "fund_code": "018957",
+  "fund_name": "基金018957",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": 0.06946552008099685,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.29333856140809483,
+  "stock_signals": [
+    {
+      "stock_code": "300394",
+      "stock_name": "天孚通信",
+      "holding_ratio": 9.53,
+      "overall_score": 0.15344386679981686,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "300308",
+      "stock_name": "中际旭创",
+      "holding_ratio": 9.43,
+      "overall_score": -0.15880795082411456,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "300476",
+      "stock_name": "胜宏科技",
+      "holding_ratio": 9.39,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "300502",
+      "stock_name": "新易盛",
+      "holding_ratio": 9.25,
+      "overall_score": -0.12958448226680608,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "002837",
+      "stock_name": "英维克",
+      "holding_ratio": 8.11,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "600183",
+      "stock_name": "生益科技",
+      "holding_ratio": 7.54,
+      "overall_score": 0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "601138",
+      "stock_name": "工业富联",
+      "holding_ratio": 7.32,
+      "overall_score": 0.31972822408690704,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "603083",
+      "stock_name": "剑桥科技",
+      "holding_ratio": 6.54,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "688313",
+      "stock_name": "仕佳光子",
+      "holding_ratio": 4.96,
+      "overall_score": 0.46981688058830845,
+      "signal_level": "买入",
+      "recommendation": "建议买入，多数指标向好",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "600105",
+      "stock_name": "永鼎股份",
+      "holding_ratio": 4.44,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "300394",
+      "300308",
+      "300476",
+      "300502",
+      "002837",
+      "600183",
+      "601138",
+      "603083",
+      "688313",
+      "600105"
+    ],
+    "weighted_score": 0.06946552008099685,
+    "avg_confidence": 0.29333856140809483,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 2,
+      "持有": 8,
+      "卖出": 0,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 16.050189517710105,
+      "持有": 83.94981048228989,
+      "卖出": 0.0,
+      "强烈卖出": 0.0
+    }
+  }
+}

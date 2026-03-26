@@ -132,8 +132,26 @@ class FundWeightedAnalyzer:
             # 读取技术指标数据
             indicator_df = pd.read_csv(indicator_file)
             
+            # 技术指标配置
+            tech_period = {
+                'ma_period': [3, 5, 10, 14, 20, 30, 45],
+                'sma_period': [3, 5, 10, 14, 20, 30, 45],
+                'ema_period': [12, 26],
+                'rsi_period': [6, 12, 24],
+                'macd_period': ['12-26-9'],
+                'boll_period': ['20-2'],
+                'kdj_period': ['9-3-3'],
+                'atr_period': [10],
+                'cci_period': [20, 26],
+                'williams_r_period': [10],
+                'bias_period': [5, 10, 20, 30, 60, 120, 250],
+                'psy_period': [10],
+                'rsv_period': [10],
+                'volume_period': [20]
+            }
+            
             # 创建信号判断器
-            judger = SignalJudger(indicator_df)
+            judger = SignalJudger(data=indicator_df, tech_period=tech_period)
             
             # 获取信号结果
             signal_result = judger.get_signals()
@@ -236,12 +254,11 @@ class FundWeightedAnalyzer:
             logger.info("未找到有效的持仓比例数据，使用平均权重")
             for holding in holdings_list:
                 holding.holding_ratio = 100.0 / len(holdings_list) if holdings_list else 0
-        
-        # 确保比例总和为100%
-        total_ratio = sum(h.holding_ratio for h in holdings_list)
-        if total_ratio > 0:
-            for holding in holdings_list:
-                holding.holding_ratio = (holding.holding_ratio / total_ratio) * 100
+            # 确保比例总和为100%（仅在使用平均权重时）
+            total_ratio = sum(h.holding_ratio for h in holdings_list)
+            if total_ratio > 0:
+                for holding in holdings_list:
+                    holding.holding_ratio = (holding.holding_ratio / total_ratio) * 100
         
         logger.info(f"解析到 {len(holdings_list)} 只股票持仓数据")
         return holdings_list

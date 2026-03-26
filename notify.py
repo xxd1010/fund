@@ -16,6 +16,12 @@ from email.utils import formataddr
 
 import requests
 
+# 导入新的通知模块
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from src.notify import init_notify, send as notify_send, MessagePriority
+from src.notify.config import load_notify_config
+
 # 原先的 print 函数和主线程的锁
 _print = print
 mutex = threading.Lock()
@@ -803,43 +809,84 @@ def chronocat(title: str, content: str) -> None:
 
 def ntfy(title: str, content: str) -> None:
     """
-    通过 Ntfy 推送消息
+    通过 Ntfy 推送消息（使用新通知模块）
     """
+    # 检查新通知模块的 ntfy 渠道是否启用
+    try:
+        notify_config = load_notify_config()
+        if not notify_config.get('enabled', False):
+            return
+        channels = notify_config.get('channels', {})
+        if 'ntfy' not in channels or not channels['ntfy'].get('enabled', False):
+            return
+    except Exception as e:
+        # 如果加载新配置失败，回退到检查旧配置
+        if not push_config.get("NTFY_TOPIC"):
+            return
 
-    def encode_rfc2047(text: str) -> str:
-        """将文本编码为符合 RFC 2047 标准的格式"""
-        encoded_bytes = base64.b64encode(text.encode("utf-8"))
-        encoded_str = encoded_bytes.decode("utf-8")
-        return f"=?utf-8?B?{encoded_str}?="
-
-    if not push_config.get("NTFY_TOPIC"):
-        return
     print("ntfy 服务启动")
-    priority = "3"
-    if not push_config.get("NTFY_PRIORITY"):
-        print("ntfy 服务的NTFY_PRIORITY 未设置!!默认设置为3")
-    else:
-        priority = push_config.get("NTFY_PRIORITY")
 
-    # 使用 RFC 2047 编码 title
-    encoded_title = encode_rfc2047(title)
+    # 映射旧优先级到新 MessagePriority
+    priority_map = {
+        "1": MessagePriority.LOW,
+        "2": MessagePriority.LOW,
+        "3": MessagePriority.DEFAULT,
+        "4": MessagePriority.HIGH,
+        "5": MessagePriority.URGENT
+    }
 
-    data = content.encode(encoding="utf-8")
-    headers = {"Title": encoded_title, "Priority": priority, "Icon": "https://qn.whyour.cn/logo.png"}  # 使用编码后的 title
-    if push_config.get("NTFY_TOKEN"):
-        headers['Authorization'] = "Bearer " + push_config.get("NTFY_TOKEN")
-    elif push_config.get("NTFY_USERNAME") and push_config.get("NTFY_PASSWORD"):
-        authStr = push_config.get("NTFY_USERNAME") + ":" + push_config.get("NTFY_PASSWORD")
-        headers['Authorization'] = "Basic " + base64.b64encode(authStr.encode('utf-8')).decode('utf-8')
-    if push_config.get("NTFY_ACTIONS"):
-        headers['Actions'] = encode_rfc2047(push_config.get("NTFY_ACTIONS"))
+    priority_str = push_config.get("NTFY_PRIORITY", "3")
+    priority = priority_map.get(priority_str, MessagePriority.DEFAULT)
 
-    url = push_config.get("NTFY_URL") + "/" + push_config.get("NTFY_TOPIC")
-    response = requests.post(url, data=data, headers=headers)
-    if response.status_code == 200:  # 使用 response.status_code 进行检查
+    # 使用新通知模块发送消息
+    # 构建消息内容，包含标题
+    message_content = f"{title}\n\n{content}"
+
+    # 发送到 ntfy 渠道
+    success = notify_send(
+        message=message_content,
+        channel="ntfy",
+        priority=priority
+    )
+
+    if success:
         print("Ntfy 推送成功！")
     else:
-        print("Ntfy 推送失败！错误信息：", response.text)
+        print("Ntfy 推送失败！")
+
+
+def markdown_save(title: str, content: str) -> None:
+    """
+    保存消息到 Markdown 文件（使用新通知模块）
+    """
+    # 检查新通知模块的 markdown 渠道是否启用
+    try:
+        notify_config = load_notify_config()
+        if not notify_config.get('enabled', False):
+            return
+        channels = notify_config.get('channels', {})
+        if 'markdown' not in channels or not channels['markdown'].get('enabled', False):
+            return
+    except Exception as e:
+        print(f"检查 Markdown 配置失败: {e}")
+        return
+
+    print("Markdown 保存服务启动")
+
+    # 使用新通知模块发送消息到 markdown 渠道
+    # 构建消息内容，包含标题
+    message_content = f"{title}\n\n{content}"
+
+    # 发送到 markdown 渠道
+    success = notify_send(
+        message=message_content,
+        channel="markdown"
+    )
+
+    if success:
+        print("Markdown 文件保存成功！")
+    else:
+        print("Markdown 文件保存失败！")
 
 
 def wxpusher_bot(title: str, content: str) -> None:
@@ -1057,8 +1104,21 @@ def add_notify_function():
         notify_function.append(chronocat)
     if push_config.get("WEBHOOK_URL") and push_config.get("WEBHOOK_METHOD"):
         notify_function.append(custom_notify)
-    if push_config.get("NTFY_TOPIC"):
-        notify_function.append(ntfy)
+
+    # 检查新通知模块的 ntfy 渠道是否启用
+    try:
+        notify_config = load_notify_config()
+        if notify_config.get('enabled', False):
+            channels = notify_config.get('channels', {})
+            if 'ntfy' in channels and channels['ntfy'].get('enabled', False):
+                notify_function.append(ntfy)
+            # 检查 markdown 渠道是否启用
+            if 'markdown' in channels and channels['markdown'].get('enabled', False):
+                notify_function.append(markdown_save)
+    except Exception as e:
+        # 如果加载新配置失败，回退到检查旧配置
+        if push_config.get("NTFY_TOPIC"):
+            notify_function.append(ntfy)
     if push_config.get("WXPUSHER_APP_TOKEN") and (
         push_config.get("WXPUSHER_TOPIC_IDS") or push_config.get("WXPUSHER_UIDS")
     ):
@@ -1090,13 +1150,37 @@ def send(title: str, content: str, ignore_default_config: bool = False, **kwargs
     hitokoto = push_config.get("HITOKOTO")
     content += "\n\n" + one() if hitokoto != "false" else ""
 
+    # 尝试使用新通知模块
+    try:
+        notify_config = load_notify_config()
+        if notify_config.get('enabled', False):
+            # 使用新通知模块发送消息
+            message_content = f"{title}\n\n{content}"
+            success = notify_send(message=message_content)
+            if success:
+                print("新通知模块推送成功！")
+            else:
+                print("新通知模块推送失败，使用旧推送方式")
+    except Exception as e:
+        print(f"新通知模块推送失败: {e}，使用旧推送方式")
+
+    # 回退到旧推送方式（排除已使用新模块的渠道）
     notify_function = add_notify_function()
-    ts = [
-        threading.Thread(target=mode, args=(title, content), name=mode.__name__)
-        for mode in notify_function
-    ]
-    [t.start() for t in ts]
-    [t.join() for t in ts]
+    # 过滤掉已使用新模块的渠道（ntfy, qq, feishu）
+    old_notify_function = []
+    for func in notify_function:
+        if func.__name__ not in ['ntfy', 'qq', 'feishu']:
+            old_notify_function.append(func)
+
+    if old_notify_function:
+        ts = [
+            threading.Thread(target=mode, args=(title, content), name=mode.__name__)
+            for mode in old_notify_function
+        ]
+        [t.start() for t in ts]
+        [t.join() for t in ts]
+    else:
+        print("无旧推送渠道可用")
 
 
 def main():

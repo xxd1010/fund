@@ -23,7 +23,7 @@ class DataProviderFactory:
     }
     
     @classmethod
-    def create_provider(cls, provider_name: str, config: Dict[str, Any] = None) -> DataProviderBase:
+    def create_provider(cls, provider_name: str, config: Optional[Dict[str, Any]] = None) -> DataProviderBase:
         """
         创建数据源提供者
         
@@ -145,7 +145,10 @@ class MultiSourceDataFetcher:
             else:
                 self.stock_source = 'akshare'  # 默认使用akshare
         
-        return self.providers.get(self.stock_source)
+        provider = self.providers.get(self.stock_source)
+        if provider is None:
+            raise ValueError(f"无法获取股票数据源提供者: {self.stock_source}")
+        return provider
     
     def get_fund_provider(self) -> DataProviderBase:
         """
@@ -165,7 +168,10 @@ class MultiSourceDataFetcher:
                     self.fund_source = source
                     break
         
-        return self.providers.get(self.fund_source)
+        provider = self.providers.get(self.fund_source)
+        if provider is None:
+            raise ValueError(f"无法获取基金数据源提供者: {self.fund_source}")
+        return provider
     
     def switch_stock_source(self, source_name: str) -> bool:
         """
@@ -230,7 +236,7 @@ class MultiSourceDataFetcher:
         return provider.get_stock_realtime(symbol)
     
     def get_stock_kline(self, symbol: str, period: str = 'daily', 
-                        start_date: str = None, end_date: str = None) -> pd.DataFrame:
+                        start_date: Optional[str] = None, end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取股票历史K线数据
         
@@ -273,8 +279,8 @@ class MultiSourceDataFetcher:
         provider = self.get_fund_provider()
         return provider.get_fund_info(fund_code)
     
-    def get_fund_nav(self, fund_code: str, start_date: str = None, 
-                     end_date: str = None) -> pd.DataFrame:
+    def get_fund_nav(self, fund_code: str, start_date: Optional[str] = None, 
+                     end_date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金历史净值
         
@@ -289,7 +295,7 @@ class MultiSourceDataFetcher:
         provider = self.get_fund_provider()
         return provider.get_fund_nav(fund_code, start_date, end_date)
     
-    def get_fund_portfolio(self, fund_code: str, date: str = None) -> pd.DataFrame:
+    def get_fund_portfolio(self, fund_code: str, date: Optional[str] = None) -> pd.DataFrame:
         """
         获取基金持仓
         

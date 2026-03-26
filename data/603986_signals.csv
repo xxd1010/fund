@@ -1,4 +1,5 @@
 ﻿指标,信号类型,强度,描述,当前值
-BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(290.2), 'upper': np.float64(323.26500346533953), 'middle': np.float64(293.4415), 'lower': np.float64(263.6179965346605)}"
-MA,neutral,0.0%,均线系统无明确信号；价格在MA20下方（偏弱）,"{'close': np.float64(290.2), 'ma_values': {5: np.float64(301.45799999999997), 10: np.float64(290.346), 20: np.float64(293.4415), 30: np.float64(292.2206666666667), 60: np.float64(274.20233333333334)}}"
-VOLUME,neutral,0.0%,成交量无特殊信号,"{'latest_volume': np.float64(312536.0), 'avg_volume': np.float64(283937.3), 'price_change': np.float64(-4.438883034773452)}"
+RSI,buy,71.6%,RSI(6)超卖 (8.5 < 30),8.508845829823017
+BOLL,neutral,0.0%,BOLL(20-2)价格接近下轨（偏弱）,"{'close': np.float64(262.0), 'upper': np.float64(311.09546813724324), 'middle': np.float64(285.191), 'lower': np.float64(259.2865318627567)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20下方（偏弱）,"{'close': np.float64(262.0), 'ma_values': {5: np.float64(275.532), 10: np.float64(287.308), 20: np.float64(285.191), 30: np.float64(289.3636666666667)}}"
+VOLUME,sell,60.3%,"放量下跌（量比:1.2, 跌幅:5.9%）","{'latest_volume': np.int64(35077307), 'avg_volume': np.float64(29068789.6), 'price_change': np.float64(-5.890804597701141)}"
