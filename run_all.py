@@ -18,78 +18,83 @@ from main import (
     logger,
 )
 from src.utils.logger import setup_logger
-from src.notify import notify, MessagePriority
+from src.notify import notify
 
 
-def send_consolidated_notification(
-    technical_results: List[Dict[str, Any]], analysis_results: List[Dict[str, Any]]
-) -> None:
+def build_consolidated_message(
+    technical_results: List[Dict[str, Any]],
+    analysis_results: List[Dict[str, Any]],
+    backtest_results: Dict[str, Any]
+) -> str:
     """
-    发送综合通知，汇总基金和股票分析结果
+    将所有执行结果合并到一条消息中
 
     Args:
         technical_results: 技术指标计算结果
         analysis_results: 基金分析结果
+        backtest_results: 回测结果
+
+    Returns:
+        合并后的消息字符串
     """
-    try:
-        # 构建基金分析摘要
-        fund_summary = ""
-        successful_funds = [r for r in analysis_results if r["status"] == "success"]
+    lines = []
 
-        if successful_funds:
-            for result in successful_funds:
-                rec_emoji = "📈" if "买入" in result.get("recommendation", "") else "📉"
-                fund_summary += (
-                    f"{rec_emoji} {result['fund_code']}: {result.get('recommendation', 'N/A')} "
-                    f"(得分: {result.get('weighted_score', 0):.3f})\n"
-                )
-        else:
-            fund_summary = "无成功分析的基金\n"
+    # 1. 技术指标计算结果汇总
+    tech_success = sum(1 for r in technical_results if r.get("status") == "success")
+    lines.append(f"📊 技术指标计算: 成功 {tech_success}/{len(technical_results)} 个基金")
 
-        # 构建股票信号摘要
-        stock_summary = ""
-        total_stocks = 0
-        buy_signals = 0
-
-        for result in technical_results:
-            if result["status"] == "success" and "results" in result:
-                for stock_code, stock_result in result["results"].items():
-                    if stock_result["status"] == "success":
-                        total_stocks += 1
-                        signal_level = stock_result.get("signal_level", "")
-                        if signal_level in ["强烈买入", "买入"]:
-                            buy_signals += 1
-                            score = stock_result.get("overall_score", 0)
-                            stock_summary += (
-                                f"📈 {stock_code}: {signal_level} (得分: {score:.3f})\n"
-                            )
-
-        if not stock_summary:
-            stock_summary = (
-                f"共分析 {total_stocks} 只股票，买入信号: {buy_signals} 只\n"
+    # 2. 基金加权平均分析结果
+    successful_funds = [r for r in analysis_results if r.get("status") == "success"]
+    if successful_funds:
+        fund_lines = []
+        for result in successful_funds:
+            rec_emoji = "📈" if "买入" in result.get("recommendation", "") else "📉"
+            fund_lines.append(
+                f"{rec_emoji} {result['fund_code']}: {result.get('recommendation', 'N/A')} "
+                f"(得分: {result.get('weighted_score', 0):.3f})"
             )
+        lines.append(f"📈 基金分析: 成功 {len(successful_funds)}/{len(analysis_results)} 只基金")
+        lines.append("\n".join(fund_lines))
+    else:
+        lines.append("📈 基金分析: 无成功分析的基金")
 
-        # 发送综合通知
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    # 3. 股票信号汇总（来自技术指标结果）
+    total_stocks = 0
+    buy_signals = 0
+    stock_lines = []
+    for result in technical_results:
+        if result.get("status") == "success" and "results" in result:
+            for stock_code, stock_result in result["results"].items():
+                if stock_result.get("status") == "success":
+                    total_stocks += 1
+                    signal_level = stock_result.get("signal_level", "")
+                    score = stock_result.get("overall_score", 0)
+                    if signal_level in ["强烈买入", "买入"]:
+                        buy_signals += 1
+                        stock_lines.append(f"📈 {stock_code}: {signal_level} (得分: {score:.3f})")
 
-        # 使用 broadcast_template 发送到所有启用渠道 (ntfy + markdown)
-        results = notify.broadcast_template(
-            "consolidated_report",
-            fund_summary=fund_summary,
-            stock_summary=stock_summary,
-            time=current_time,
-            priority=MessagePriority.HIGH,
+    if stock_lines:
+        lines.append(f"📈 股票信号: 共 {total_stocks} 只，其中买入信号 {buy_signals} 只")
+        lines.append("\n".join(stock_lines))
+    else:
+        lines.append(f"📈 股票信号: 共分析 {total_stocks} 只，无强烈买入信号")
+
+    # 4. 回测结果汇总
+    if backtest_results:
+        successful_backtests = sum(
+            1 for r in backtest_results.values()
+            if getattr(r, 'metrics', None) is not None
         )
+        lines.append(f"📉 回测评估: 成功 {successful_backtests}/{len(backtest_results)} 个基金")
+        for fund_code, result in backtest_results.items():
+            if getattr(result, 'metrics', None) is not None:
+                total_return = result.metrics.get('total_return', 0)
+                sharpe = result.metrics.get('sharpe_ratio', 0)
+                lines.append(f"  {fund_code}: 收益率 {total_return:.2%}, 夏普比率 {sharpe:.2f}")
+    else:
+        lines.append("📉 回测评估: 无回测结果")
 
-        # 检查发送结果
-        successful_channels = [ch for ch, success in results.items() if success]
-        if successful_channels:
-            logger.info(f"✅ 综合通知已发送到渠道: {', '.join(successful_channels)}")
-        else:
-            logger.warning("❌ 综合通知发送失败")
-
-    except Exception as e:
-        logger.error(f"❌ 发送综合通知失败: {e}")
+    return "\n\n".join(lines)
 
 
 def main():
@@ -149,7 +154,7 @@ def main():
 
     # 步骤3: 基金加权平均分析 (操作2)
     logger.info("=" * 60)
-    logger.info("[步骤 3/3] 正在执行：基金加权平均分析")
+    logger.info("[步骤 3/4] 正在执行：基金加权平均分析")
     logger.info("=" * 60)
     analysis_results = []
     try:
@@ -185,17 +190,35 @@ def main():
         logger.error(f"❌ 基金加权平均分析失败: {e}")
         logger.info("")
 
-    # 发送综合通知
-    notify_file = "./notify_logs/notify.md"
+    # 步骤4: 回测策略评估
+    logger.info("=" * 60)
+    logger.info("[步骤 4/4] 正在执行：回测策略评估")
+    logger.info("=" * 60)
+    backtest_results = {}
     try:
-        if os.path.exists(notify_file):
-            with open(notify_file, "r", encoding="utf-8") as f:
-                message = f.read()
-            send_notification(title="自动化执行完成", message=message)
-        else:
-            logger.warning(f"通知文件不存在: {notify_file}")
+        from src.workflow.backtest import BacktestWorkflow
+        backtest_workflow = BacktestWorkflow(
+            start_date=start_date, data_dir=data_dir, config=config
+        )
+        backtest_results = backtest_workflow.run_batch(fund_codes)
+        successful_backtests = sum(
+            1 for r in backtest_results.values()
+            if getattr(r, 'metrics', None) is not None
+        )
+        logger.info(f"✅ 回测策略评估完成！成功评估 {successful_backtests}/{len(backtest_results)} 个基金")
+        logger.info("")
     except Exception as e:
-        logger.error(f"发送通知失败: {e}")
+        logger.error(f"❌ 回测策略评估失败: {e}")
+        logger.info("")
+
+    # 发送综合通知 - 将所有结果合并到一条消息
+    try:
+        consolidated_message = build_consolidated_message(
+            technical_results, analysis_results, backtest_results
+        )
+        send_notification(title="自动化执行完成", message=consolidated_message)
+    except Exception as e:
+        logger.error(f"发送综合通知失败: {e}")
 
     # 完成总结
     logger.info("=" * 60)
