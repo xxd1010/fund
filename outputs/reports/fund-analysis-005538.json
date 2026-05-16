@@ -1,0 +1,131 @@
+{
+  "fund_code": "005538",
+  "fund_name": "中航新起航灵活配置混合C",
+  "total_stocks": 10,
+  "analyzed_stocks": 10,
+  "weighted_score": -0.029231735951335734,
+  "fund_recommendation": "建议持有",
+  "confidence": 0.3008672016567434,
+  "stock_signals": [
+    {
+      "stock_code": "301150",
+      "stock_name": "中一科技",
+      "holding_ratio": 9.76,
+      "overall_score": -0.12,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688778",
+      "stock_name": "厦钨新能",
+      "holding_ratio": 9.41,
+      "overall_score": 0.0,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.0
+    },
+    {
+      "stock_code": "300450",
+      "stock_name": "先导智能",
+      "holding_ratio": 9.07,
+      "overall_score": 0.06512915129151274,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "301662",
+      "stock_name": "宏工科技",
+      "holding_ratio": 8.77,
+      "overall_score": -0.13434438584847452,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "688155",
+      "stock_name": "先惠技术",
+      "holding_ratio": 8.65,
+      "overall_score": 0.13047699076359412,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.6666666666666666
+    },
+    {
+      "stock_code": "603663",
+      "stock_name": "三祥新材",
+      "holding_ratio": 8.19,
+      "overall_score": 0.05825688073394551,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "688147",
+      "stock_name": "微导纳米",
+      "holding_ratio": 6.56,
+      "overall_score": -0.224341352277955,
+      "signal_level": "卖出",
+      "recommendation": "建议卖出，部分指标走弱",
+      "confidence": 0.5
+    },
+    {
+      "stock_code": "002203",
+      "stock_name": "海亮股份",
+      "holding_ratio": 6.24,
+      "overall_score": -0.003658536585365795,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.3333333333333333
+    },
+    {
+      "stock_code": "300285",
+      "stock_name": "国瓷材料",
+      "holding_ratio": 5.62,
+      "overall_score": -0.19948942096526476,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    },
+    {
+      "stock_code": "002846",
+      "stock_name": "英联股份",
+      "holding_ratio": 4.99,
+      "overall_score": 0.10222929936305682,
+      "signal_level": "持有",
+      "recommendation": "建议持有观望，等待明确信号",
+      "confidence": 0.16666666666666666
+    }
+  ],
+  "details": {
+    "analyzed_stock_codes": [
+      "301150",
+      "688778",
+      "300450",
+      "301662",
+      "688155",
+      "603663",
+      "688147",
+      "002203",
+      "300285",
+      "002846"
+    ],
+    "weighted_score": -0.029231735951335734,
+    "avg_confidence": 0.3008672016567434,
+    "signal_distribution": {
+      "强烈买入": 0,
+      "买入": 0,
+      "持有": 9,
+      "卖出": 1,
+      "强烈卖出": 0
+    },
+    "holding_distribution": {
+      "强烈买入": 0.0,
+      "买入": 0.0,
+      "持有": 91.50918974889981,
+      "卖出": 8.49081025110018,
+      "强烈卖出": 0.0
+    }
+  }
+}

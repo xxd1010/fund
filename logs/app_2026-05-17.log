@@ -1,0 +1,40 @@
+2026-05-17 00:49:37 | INFO     | src.notify:_load_channels:49 | 通知渠道 [ntfy] 初始化成功
+2026-05-17 00:49:37 | INFO     | src.notify:_load_channels:49 | 通知渠道 [markdown] 初始化成功
+2026-05-17 00:49:37 | INFO     | __main__:main:99 | ============================================================
+2026-05-17 00:49:37 | INFO     | __main__:main:100 | 开始自动化执行流程（按 3→1→2 顺序）
+2026-05-17 00:49:37 | INFO     | __main__:main:101 | ============================================================
+2026-05-17 00:49:37 | INFO     | __main__:main:109 | 配置信息:
+2026-05-17 00:49:37 | INFO     | __main__:main:110 |   基金代码: ['005538']
+2026-05-17 00:49:37 | INFO     | __main__:main:111 |   开始日期: 2019-01-01
+2026-05-17 00:49:37 | INFO     | __main__:main:112 |   数据目录: stock_data
+2026-05-17 00:49:37 | INFO     | __main__:main:113 | 
+2026-05-17 00:49:37 | INFO     | __main__:main:116 | ============================================================
+2026-05-17 00:49:37 | INFO     | __main__:main:117 | [步骤 1/3] 正在执行：更新数据
+2026-05-17 00:49:37 | INFO     | __main__:main:118 | ============================================================
+2026-05-17 00:49:37 | INFO     | src.update_data:run_update_workflow:183 | 开始数据更新流程
+2026-05-17 00:49:37 | INFO     | src.update_data:run_update_workflow:184 | 基金代码列表: ['005538']
+2026-05-17 00:49:37 | INFO     | src.update_data:run_update_workflow:185 | 开始日期: 2019-01-01
+2026-05-17 00:49:37 | INFO     | src.update_data:run_update_workflow:186 | 数据目录: stock_data
+2026-05-17 00:49:37 | INFO     | src.update_data:update_data:19 | 开始更新数据，基金代码: ['005538']
+2026-05-17 00:49:37 | INFO     | src.core.data_factory:create_provider:43 | 创建数据源提供者: akshare
+2026-05-17 00:49:37 | INFO     | src.core.data_factory:_init_providers:148 | 初始化数据源提供者: akshare
+2026-05-17 01:04:03 | INFO     | src.notify:_load_channels:49 | 通知渠道 [ntfy] 初始化成功
+2026-05-17 01:04:03 | INFO     | src.notify:_load_channels:49 | 通知渠道 [markdown] 初始化成功
+2026-05-17 01:04:03 | INFO     | __main__:main:99 | ============================================================
+2026-05-17 01:04:03 | INFO     | __main__:main:100 | 开始自动化执行流程（按 3→1→2 顺序）
+2026-05-17 01:04:03 | INFO     | __main__:main:101 | ============================================================
+2026-05-17 01:04:03 | INFO     | __main__:main:109 | 配置信息:
+2026-05-17 01:04:03 | INFO     | __main__:main:110 |   基金代码: ['005538']
+2026-05-17 01:04:03 | INFO     | __main__:main:111 |   开始日期: 2019-01-01
+2026-05-17 01:04:03 | INFO     | __main__:main:112 |   数据目录: stock_data
+2026-05-17 01:04:03 | INFO     | __main__:main:113 | 
+2026-05-17 01:04:03 | INFO     | __main__:main:116 | ============================================================
+2026-05-17 01:04:03 | INFO     | __main__:main:117 | [步骤 1/3] 正在执行：更新数据
+2026-05-17 01:04:03 | INFO     | __main__:main:118 | ============================================================
+2026-05-17 01:04:03 | INFO     | src.update_data:run_update_workflow:183 | 开始数据更新流程
+2026-05-17 01:04:03 | INFO     | src.update_data:run_update_workflow:184 | 基金代码列表: ['005538']
+2026-05-17 01:04:03 | INFO     | src.update_data:run_update_workflow:185 | 开始日期: 2019-01-01
+2026-05-17 01:04:03 | INFO     | src.update_data:run_update_workflow:186 | 数据目录: stock_data
+2026-05-17 01:04:03 | INFO     | src.update_data:update_data:19 | 开始更新数据，基金代码: ['005538']
+2026-05-17 01:04:03 | INFO     | src.core.data_factory:create_provider:43 | 创建数据源提供者: akshare
+2026-05-17 01:04:03 | INFO     | src.core.data_factory:_init_providers:148 | 初始化数据源提供者: akshare

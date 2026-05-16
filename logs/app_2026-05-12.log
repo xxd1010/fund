@@ -1,0 +1,2 @@
+2026-05-12 23:11:23 | INFO     | src.notify:_load_channels:49 | 通知渠道 [ntfy] 初始化成功
+2026-05-12 23:11:23 | INFO     | src.notify:_load_channels:49 | 通知渠道 [markdown] 初始化成功

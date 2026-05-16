@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import sys; sys.path.insert\\(0,'.'\\); from src.utils.logger import logger; print\\('utils OK'\\)\")",
+      "Bash(python -c \"import py_compile; files=['config.json','requirements.txt','main.py','run_all.py','notify.py']; [py_compile.compile\\(f, doraise=True\\) for f in files if f.endswith\\('.py'\\)]; print\\('Syntax OK'\\)\")",
+      "Bash(python -c ' *)",
+      "Bash(python main.py --backtest --single-fund 005538)",
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git reset *)",
+      "Bash(git rm *)"
+    ]
+  }
+}

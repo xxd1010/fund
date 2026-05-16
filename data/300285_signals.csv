@@ -1,0 +1,4 @@
+﻿指标,信号类型,强度,描述,当前值
+KDJ,sell,99.7%,KDJ(9-3-3)死叉,"{'K': np.float64(65.84176776558337), 'D': np.float64(69.74888904150286), 'J': np.float64(58.02752521374438)}"
+BOLL,neutral,0.0%,BOLL(20-2)价格在通道中部,"{'close': np.float64(35.78), 'upper': np.float64(38.77673762374083), 'middle': np.float64(34.3685), 'lower': np.float64(29.96026237625917)}"
+MA,neutral,0.0%,均线系统无明确信号；价格在MA20上方（偏强）,"{'close': np.float64(35.78), 'ma_values': {5: np.float64(36.07), 10: np.float64(36.112), 20: np.float64(34.3685), 30: np.float64(33.410333333333334)}}"
